@@ -12,7 +12,6 @@ const Cart = () => {
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
-      {/* Favicon */}
       <link
         rel="shortcut icon"
         type="image/x-icon"

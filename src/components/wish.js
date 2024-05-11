@@ -31,22 +31,22 @@ const Wish = () => {
             </div>
           </div>
           <h4 className="rbt-card-title">
-            <a href="course-details.html">React Front To Back</a>
+            <a href="course-details.html">Course Name</a>
           </h4>
           <ul className="rbt-meta">
             <li>
               <i className="feather-book" />
-              20 Lessons
+             Number of lessons 
             </li>
             <li>
               <i className="feather-users" />
-              40 Students
+              Number of Students
             </li>
           </ul>
           <div className="rbt-card-bottom">
             <div className="rbt-price">
-              <span className="current-price">$60</span>
-              <span className="off-price">$120</span>
+              <span className="current-price">$</span>
+              <span className="off-price">$1</span>
             </div>
             <a className="rbt-btn-link" href="course-details.html">
               Learn More

@@ -1,4 +1,6 @@
 import React from "react";
+import "public/assets/css/plugins/swiper.css";
+
 import Card from "../components/card.js";
 
 
@@ -22,24 +24,7 @@ const Landing = () => {
     type="image/x-icon"
     href="assets/images/favicon.png"
   />
-  {/* CSS
-	============================================ */}
-  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/vendor/slick.css" />
-  <link rel="stylesheet" href="assets/css/vendor/slick-theme.css" />
-  <link rel="stylesheet" href="assets/css/plugins/sal.css" />
-  <link rel="stylesheet" href="assets/css/plugins/feather.css" />
-  <link rel="stylesheet" href="assets/css/plugins/fontawesome.min.css" />
-  <link rel="stylesheet" href="assets/css/plugins/euclid-circulara.css" />
-  <link rel="stylesheet" href="assets/css/plugins/swiper.css" />
-  <link rel="stylesheet" href="assets/css/plugins/magnify.css" />
-  <link rel="stylesheet" href="assets/css/plugins/odometer.css" />
-  <link rel="stylesheet" href="assets/css/plugins/animation.css" />
-  <link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css" />
-  <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css" />
-  <link rel="stylesheet" href="assets/css/plugins/magnigy-popup.min.css" />
-  <link rel="stylesheet" href="assets/css/plugins/plyr.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+
   {/* Start Header Area */}
   <div className="rbt-sticky-placeholder" />
   <a className="close_side_menu" href="javascript:void(0);" />
@@ -82,7 +67,7 @@ const Landing = () => {
               </div>
               <div className="shape-wrapper" id="scene">
                 <img
-                  src="assets/images/banner/banner-01.png"
+                  src="assets/images/banner/image10.png"
                   alt="Hero Image"
                 />
                 <div className="hero-bg-shape-1 layer" data-depth="0.4">

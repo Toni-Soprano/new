@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Addquizform = () => {
   const [questions, setQuestions] = useState([
     { question: "", options: ["", ""], correctAnswer: "" },
   ]);
   const [quizCreated, setQuizCreated] = useState(false);
-  const [editableQuiz, setEditableQuiz] = useState(null); 
+  const [editableQuiz, setEditableQuiz] = useState(null);
 
   const handleQuestionChange = (index, field, value) => {
     const updatedQuestions = [...questions];
@@ -54,9 +55,16 @@ const Addquizform = () => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            console.log(questions);
-            setQuizCreated(true);
-            setEditableQuiz([...questions]); 
+            axios
+              .post("http://your-api-endpoint.com/create-quiz", questions)
+              .then((response) => {
+                console.log(response.data);
+                setQuizCreated(true);
+                setEditableQuiz([...questions]);
+              })
+              .catch((error) => {
+                console.error("Error creating quiz:", error);
+              });
           }}
           style={{
             display: "flex",
@@ -174,19 +182,7 @@ const Addquizform = () => {
           <button type="button" onClick={addQuestion}>
             + Add New Question
           </button>
-          <button type="submit">
-            <a class="rbt-btn bg-coral-opacity hover-icon-reverse" href="#">
-              <span class="icon-reverse-wrapper">
-                <span class="btn-text">Approve Quiz</span>
-                <span class="btn-icon">
-                  <i class="feather-arrow-right"></i>
-                </span>
-                <span class="btn-icon">
-                  <i class="feather-arrow-right"></i>
-                </span>
-              </span>
-            </a>
-          </button>
+          <button type="submit">Approve Quiz</button>
         </form>
       )}
     </>

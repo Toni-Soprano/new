@@ -9,30 +9,38 @@ import Footer from "./components/footer.js";
 //import Product from "./components/product.js";
 //import Products from "./inerface/products.js";
 //import Forumlogin from "./components/forumlogin";
-//import Forumregister from "./components/forumregister";
-import Instructorsidebar from "./components/instructorsidebar";
+import Forumregister from "./components/forumregister";
+//import Instructorsidebar from "./components/instructorsidebar";
 //import Studentdash from "./interface/studentdash.js";
 //import Studentprofile from "./interface/studentprofile.js";
-//import Studentcourse from "./interface/studentcourse.js";
+import Studentcourse from "./interface/studentcourse.js";
 //import ecourse from "./components/ecourse.js";
 //import Studentwishlist from "./interface/studentwishlist.js";
 //import Wish from "./components/wish.js";
-//import Studentwishlist from "./interface/studentsettings.js";
-//import Studentsettings from "./interface/studentsettings.js";
+import Studentwishlist from "./interface/studentsettings.js";
+import Studentsettings from "./interface/studentsettings.js";
 //import Studentquiz from "./interface/studentquiz.js";
 //import Studentreviews from "./interface/studentreviews.js";
-import Instructordash from "./interface/instructordash.js";
+//import Instructordash from "./interface/instructordash.js";
 //import Instructorcourses from "./interface/instructorcourses.js";
-//import Instructorsettings from "./interface/instructorsettings.js";
+import Instructorsettings from "./interface/instructorsettings.js";
 //import Announcements from "./interface/announcements.js";
 //import Cart from "./interface/cart.js";
 //import Checkout from "./interface/checkout.js";
 //import Landing from "./interface/landing.js";
 //import Admindash from "./interface/admindash.js";
+//import Studentwishlist from "./interface/studentwishlist.js";
 //import Adminsidebar from "./components/adminsidebar";
 //import Createcourse from "./interface/createcourse.js";
 //import Addquizform from "./components/addquizform.js";
 //import CourseIntroVideo from "./components/courseintrovid.js";
+//import Coursedetails from "./interface/coursedetails.js";
+//import CourseActionBottom from "./components/courseactionbottom";
+import Becometeacher from "./components/becometeacher.js";
+import Studentreviews from "./interface/studentreviews.js";
+import Updatepassword from "./components/updatepassword.js";
+import Profile from "./components/profile.js";
+
 
 
 
@@ -44,7 +52,7 @@ function App() {
       {/* <Card /> */}
       {/* <Courses /> */}
       {/* <Events />  <Event />*/}
-      <Instructordash />
+      <Profile/>
       <Footer />
     </div>
   );

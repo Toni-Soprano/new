@@ -154,7 +154,6 @@ const Footer = () => {
           <hr className="rbt-separator m-0" />
         </div>
       </div>
-      {/* Start Copyright Area  */}
       <div className="copyright-area copyright-style-1 ptb--20">
         <div className="container">
           <div className="row align-items-center">

@@ -1,4 +1,6 @@
 import React from "react";
+import Studentsidebar from "../components/studentsidebar";
+
 const Studentquiz = () => {
   return (
     <div>
