@@ -3,7 +3,7 @@ import Completedcourse from "../components/Completedcourse.js";
 
 const Studentcourse = () => {
   return (
-    <div>
+    <div>          
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <title>

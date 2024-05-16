@@ -1,5 +1,7 @@
 import React from "react";
 import Completedcourse from "../components/Completedcourse";
+import Adminsidebar from "../components/adminsidebar";
+
 
 const Admindash = () => {
   return (

@@ -42,10 +42,10 @@ const Footer = () => {
                 <div className="contact-btn mt--30">
                   <a
                     className="rbt-btn hover-icon-reverse btn-border-gradient radius-round"
-                    href="#"
+                    href="/contact"
                   >
                     <div className="icon-reverse-wrapper">
-                      <span className="btn-text">Contact With Us</span>
+                      <span className="btn-text">Contact Us</span>
                       <span className="btn-icon">
                         <i className="feather-arrow-right" />
                       </span>
@@ -57,62 +57,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-2 col-md-6 col-sm-6 col-12">
-              <div className="footer-widget">
-                <h5 className="ft-title">Useful Links</h5>
-                <ul className="ft-link">
-                  <li>
-                    <a href="12-marketplace.html">Marketplace</a>
-                  </li>
-                  <li>
-                    <a href="04-kindergarten.html">kindergarten</a>
-                  </li>
-                  <li>
-                    <a href="13-university-classic.html">University</a>
-                  </li>
-                  <li>
-                    <a href="09-gym-coaching.html">GYM Coaching</a>
-                  </li>
-                  <li>
-                    <a href="faqs.html">FAQ</a>
-                  </li>
-                  <li>
-                    <a href="about-us-01.html">About Us</a>
-                  </li>
-                  <li>
-                    <a href="privacy-policy.html">Privacy policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-2 col-md-6 col-sm-6 col-12">
-              <div className="footer-widget">
-                <h5 className="ft-title">Our Company</h5>
-                <ul className="ft-link">
-                  <li>
-                    <a href="contact.html">Contact Us</a>
-                  </li>
-                  <li>
-                    <a href="become-a-teacher.html">Become Teacher</a>
-                  </li>
-                  <li>
-                    <a href="blog.html">Blog</a>
-                  </li>
-                  <li>
-                    <a href="instructor.html">Instructor</a>
-                  </li>
-                  <li>
-                    <a href="event-list.html">Events</a>
-                  </li>
-                  <li>
-                    <a href="course-filter-one-toggle.html">Course</a>
-                  </li>
-                  <li>
-                    <a href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+
             <div className="col-lg-4 col-md-6 col-sm-6 col-12">
               <div className="footer-widget">
                 <h5 className="ft-title">Get Contact</h5>
@@ -159,11 +104,7 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
               <p className="rbt-link-hover text-center text-lg-start">
-                Copyright © 2023{" "}
-                <a href="https://themeforest.net/user/rbt-themes">
-                  Rainbow-Themes.
-                </a>{" "}
-                All Rights Reserved
+                Copyright © 2024 All Rights Reserved
               </p>
             </div>
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
@@ -174,11 +115,9 @@ const Footer = () => {
                 <li>
                   <a href="privacy-policy.html">Privacy policy</a>
                 </li>
+                <li></li>
                 <li>
-                  <a href="subscription.html">Subscription</a>
-                </li>
-                <li>
-                  <a href="login.html">Login &amp; Register</a>
+                  <a href="/forumregister">Login &amp; Register</a>
                 </li>
               </ul>
             </div>

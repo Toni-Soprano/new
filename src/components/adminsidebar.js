@@ -8,7 +8,7 @@ const Adminsidebar = () => {
               <div className="content-item-content">
                 <div className="rbt-default-sidebar-wrapper">
                   <div className="section-title mb--20">
-                    <h6 className="rbt-title-style-2">Welcome, Admin</h6>
+                    <h6 className="rbt-title-style-2">Welcome</h6>
                   </div>
                   <nav className="mainmenu-nav">
                     <ul className="dashboard-mainmenu rbt-default-sidebar-list">
@@ -18,17 +18,8 @@ const Adminsidebar = () => {
                           <span>Dashboard</span>
                         </a>
                       </li>
-                      <li>
-                        <a href="instructor-profile.html">
-                          <i className="feather-user" />
-                          <span>My Profile</span>
-                        </a>
-                      </li>
                     </ul>
                   </nav>
-                  <div className="section-title mt--40 mb--20">
-                    <h6 className="rbt-title-style-2">Instructor</h6>
-                  </div>
                   <nav className="mainmenu-nav">
                     <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                       <li>

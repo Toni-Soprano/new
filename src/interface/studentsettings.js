@@ -6,13 +6,10 @@ import Socialshare from "../components/Socialshare.js";
 
 const Studentsettings = () => {
   return (
-    
     <>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <title>
-        Student Reviews - Online Courses &amp;
-      </title>
+      <title>Student Reviews - Online Courses &amp;</title>
       <meta name="robots" content="noindex, follow" />
       <meta name="description" content />
       <meta
@@ -82,7 +79,84 @@ const Studentsettings = () => {
               <div className="row g-5">
                 <div className="col-lg-3">
                   {/* Start Dashboard Sidebar  */}
-                <Studentsidebar/>
+                  <div className="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
+                    <div className="inner">
+                      <div className="content-item-content">
+                        <div className="rbt-default-sidebar-wrapper">
+                          <div className="section-title mb--20">
+                            <h6 className="rbt-title-style-2">
+                              Welcome, Student
+                            </h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <a href="student-dashboard.html">
+                                  <i className="feather-home" />
+                                  <span>Dashboard</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="student-profile.html">
+                                  <i className="feather-user" />
+                                  <span>My Profile</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="student-enrolled-courses.html">
+                                  <i className="feather-book-open" />
+                                  <span>Enrolled Courses</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="student-wishlist.html">
+                                  <i className="feather-bookmark" />
+                                  <span>Wishlist</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="student-reviews.html">
+                                  <i className="feather-star" />
+                                  <span>Reviews</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="student-my-quiz-attempts.html">
+                                  <i className="feather-help-circle" />
+                                  <span>My Quiz Attempts</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="student-order-history.html">
+                                  <i className="feather-shopping-bag" />
+                                  <span>Order History</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                          <div className="section-title mt--40 mb--20">
+                            <h6 className="rbt-title-style-2">User</h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <a href="student-settings.html">
+                                  <i className="feather-settings" />
+                                  <span>Settings</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="index.html">
+                                  <i className="feather-log-out" />
+                                  <span>Logout</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   {/* End Dashboard Sidebar  */}
                 </div>
                 <div className="col-lg-9">
@@ -151,174 +225,174 @@ const Studentsettings = () => {
                         >
                           <div className="rbt-dashboard-content-wrapper">
                             <div className="tutor-bg-photo bg_image bg_image--23 height-245" />
-                           <Profile/>
-                        </div>
-                        <div
-                          className="tab-pane fade"
-                          id="password"
-                          role="tabpanel"
-                          aria-labelledby="password-tab"
-                        >
-                          {/* Start Profile Row  */}
-                          <form
-                            action="#"
-                            className="rbt-profile-row rbt-default-form row row--15"
+                            <Profile />
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="password"
+                            role="tabpanel"
+                            aria-labelledby="password-tab"
                           >
-                            <div className="col-12">
-                              <div className="rbt-form-group">
-                                <label htmlFor="currentpassword">
-                                  Current Password
-                                </label>
-                                <input
-                                  id="currentpassword"
-                                  type="password"
-                                  placeholder="Current Password"
-                                />
+                            {/* Start Profile Row  */}
+                            <form
+                              action="#"
+                              className="rbt-profile-row rbt-default-form row row--15"
+                            >
+                              <div className="col-12">
+                                <div className="rbt-form-group">
+                                  <label htmlFor="currentpassword">
+                                    Current Password
+                                  </label>
+                                  <input
+                                    id="currentpassword"
+                                    type="password"
+                                    placeholder="Current Password"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div className="col-12">
-                              <div className="rbt-form-group">
-                                <label htmlFor="newpassword">
-                                  New Password
-                                </label>
-                                <input
-                                  id="newpassword"
-                                  type="password"
-                                  placeholder="New Password"
-                                />
+                              <div className="col-12">
+                                <div className="rbt-form-group">
+                                  <label htmlFor="newpassword">
+                                    New Password
+                                  </label>
+                                  <input
+                                    id="newpassword"
+                                    type="password"
+                                    placeholder="New Password"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div className="col-12">
-                              <div className="rbt-form-group">
-                                <label htmlFor="retypenewpassword">
-                                  Re-type New Password
-                                </label>
-                                <input
-                                  id="retypenewpassword"
-                                  type="password"
-                                  placeholder="Re-type New Password"
-                                />
+                              <div className="col-12">
+                                <div className="rbt-form-group">
+                                  <label htmlFor="retypenewpassword">
+                                    Re-type New Password
+                                  </label>
+                                  <input
+                                    id="retypenewpassword"
+                                    type="password"
+                                    placeholder="Re-type New Password"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div className="col-12 mt--10">
-                              <div className="rbt-form-group">
-                                <a className="rbt-btn btn-gradient" href="#">
-                                  Update Password
-                                </a>
+                              <div className="col-12 mt--10">
+                                <div className="rbt-form-group">
+                                  <a className="rbt-btn btn-gradient" href="#">
+                                    Update Password
+                                  </a>
+                                </div>
                               </div>
-                            </div>
-                          </form>
-                          {/* End Profile Row  */}
-                        </div>
-                        <div
-                          className="tab-pane fade"
-                          id="social"
-                          role="tabpanel"
-                          aria-labelledby="social-tab"
-                        >
-                          {/* Start Profile Row  */}
-                          <form
-                            action="#"
-                            className="rbt-profile-row rbt-default-form row row--15"
+                            </form>
+                            {/* End Profile Row  */}
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="social"
+                            role="tabpanel"
+                            aria-labelledby="social-tab"
                           >
-                            <div className="col-12">
-                              <div className="rbt-form-group">
-                                <label htmlFor="facebook">
-                                  <i className="feather-facebook" /> Facebook
-                                </label>
-                                <input
-                                  id="facebook"
-                                  type="text"
-                                  placeholder="https://facebook.com/"
-                                />
+                            {/* Start Profile Row  */}
+                            <form
+                              action="#"
+                              className="rbt-profile-row rbt-default-form row row--15"
+                            >
+                              <div className="col-12">
+                                <div className="rbt-form-group">
+                                  <label htmlFor="facebook">
+                                    <i className="feather-facebook" /> Facebook
+                                  </label>
+                                  <input
+                                    id="facebook"
+                                    type="text"
+                                    placeholder="https://facebook.com/"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div className="col-12">
-                              <div className="rbt-form-group">
-                                <label htmlFor="twitter">
-                                  <i className="feather-twitter" /> Twitter
-                                </label>
-                                <input
-                                  id="twitter"
-                                  type="text"
-                                  placeholder="https://twitter.com/"
-                                />
+                              <div className="col-12">
+                                <div className="rbt-form-group">
+                                  <label htmlFor="twitter">
+                                    <i className="feather-twitter" /> Twitter
+                                  </label>
+                                  <input
+                                    id="twitter"
+                                    type="text"
+                                    placeholder="https://twitter.com/"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div className="col-12">
-                              <div className="rbt-form-group">
-                                <label htmlFor="linkedin">
-                                  <i className="feather-linkedin" /> Linkedin
-                                </label>
-                                <input
-                                  id="linkedin"
-                                  type="text"
-                                  placeholder="https://linkedin.com/"
-                                />
+                              <div className="col-12">
+                                <div className="rbt-form-group">
+                                  <label htmlFor="linkedin">
+                                    <i className="feather-linkedin" /> Linkedin
+                                  </label>
+                                  <input
+                                    id="linkedin"
+                                    type="text"
+                                    placeholder="https://linkedin.com/"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div className="col-12">
-                              <div className="rbt-form-group">
-                                <label htmlFor="website">
-                                  <i className="feather-globe" /> Website
-                                </label>
-                                <input
-                                  id="website"
-                                  type="text"
-                                  placeholder="https://website.com/"
-                                />
+                              <div className="col-12">
+                                <div className="rbt-form-group">
+                                  <label htmlFor="website">
+                                    <i className="feather-globe" /> Website
+                                  </label>
+                                  <input
+                                    id="website"
+                                    type="text"
+                                    placeholder="https://website.com/"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div className="col-12">
-                              <div className="rbt-form-group">
-                                <label htmlFor="github">
-                                  <i className="feather-github" /> Github
-                                </label>
-                                <input
-                                  id="github"
-                                  type="text"
-                                  placeholder="https://github.com/"
-                                />
+                              <div className="col-12">
+                                <div className="rbt-form-group">
+                                  <label htmlFor="github">
+                                    <i className="feather-github" /> Github
+                                  </label>
+                                  <input
+                                    id="github"
+                                    type="text"
+                                    placeholder="https://github.com/"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div className="col-12 mt--10">
-                              <div className="rbt-form-group">
-                                <a className="rbt-btn btn-gradient" href="#">
-                                  Update Profile
-                                </a>
+                              <div className="col-12 mt--10">
+                                <div className="rbt-form-group">
+                                  <a className="rbt-btn btn-gradient" href="#">
+                                    Update Profile
+                                  </a>
+                                </div>
                               </div>
-                            </div>
-                          </form>
-                          {/* End Profile Row  */}
+                            </form>
+                            {/* End Profile Row  */}
+                          </div>
                         </div>
                       </div>
                     </div>
+                    {/* End Instructor Profile  */}
                   </div>
-                  {/* End Instructor Profile  */}
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* End Card Style */}
-      <div className="rbt-separator-mid">
-        <div className="container">
-          <hr className="rbt-separator m-0" />
+        {/* End Card Style */}
+        <div className="rbt-separator-mid">
+          <div className="container">
+            <hr className="rbt-separator m-0" />
+          </div>
+        </div>
+        <div className="rbt-progress-parent">
+          <svg
+            className="rbt-back-circle svg-inner"
+            width="100%"
+            height="100%"
+            viewBox="-1 -1 102 102"
+          >
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+          </svg>
         </div>
       </div>
-        <div className="rbt-progress-parent">
-        <svg
-          className="rbt-back-circle svg-inner"
-          width="100%"
-          height="100%"
-          viewBox="-1 -1 102 102"
-        >
-          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-      </div>
-    </div>
-  </>
+    </>
   );
 };
 

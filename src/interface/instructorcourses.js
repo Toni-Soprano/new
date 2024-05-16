@@ -1,7 +1,5 @@
 
 import React from "react";
-import Instructorsidebar from "./components/instructorsidebar";
-
 const Instructorcourses = () => {
   return (
     <div>
@@ -842,7 +840,7 @@ const Instructorcourses = () => {
               {/* End Dashboard Top  */}
               <div className="row g-5">
                 <div className="col-lg-3">
-                 <Instructorsidebar/>
+                {<></>} 
                 </div>
                 <div className="col-lg-9">
                   {/* Start Enrole Course  */}
