@@ -58,39 +58,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <div className="footer-widget">
-                <h5 className="ft-title">Get Contact</h5>
-                <ul className="ft-link">
-                  <li>
-                    <span>Phone:</span> <a href="#">(406) 555-0120</a>
-                  </li>
-                  <li>
-                    <span>E-mail:</span>{" "}
-                    <a href="mailto:hr@example.com">admin@example.com</a>
-                  </li>
-                </ul>
-                <form className="newsletter-form mt--20" action="#">
-                  <h6 className="w-600">Newsletter</h6>
-                  <p className="description">
-                    2000+ Our students are subscribe Around the World.
-                    <br /> Don’t be shy introduce yourself!
-                  </p>
-                  <div className="form-group right-icon icon-email mb--20">
-                    <label htmlFor="email">Enter Your Email Here</label>
-                    <input id="email" type="email" />
-                  </div>
-                  <div className="form-group mb--0">
-                    <button
-                      className="rbt-btn rbt-switch-btn btn-gradient radius-round btn-sm"
-                      type="submit"
-                    >
-                      <span data-text="Submit Now">Submit Now</span>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>

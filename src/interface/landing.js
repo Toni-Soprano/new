@@ -1,6 +1,7 @@
 import React from "react";
 
 import Card from "../components/card.js";
+import { Link } from "react-router-dom";
 
 
 
@@ -10,7 +11,6 @@ const Landing = () => {
     <div>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <title>Home - Online Courses &amp; Education Bootstrap5 Template</title>
       <meta name="robots" content="noindex, follow" />
       <meta name="description" content />
       <meta
@@ -48,20 +48,15 @@ const Landing = () => {
                     </p>
                     <div className="slider-btn">
                   
-    <div className="rbt-btn btn-gradient hover-icon-reverse"
-                        to="/courses"/>
-                      
-                        <span className="icon-reverse-wrapper">
-                          <span className="btn-text">View Course</span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                        </span>
-                     
-                    </div>
+                                    <a class="rbt-btn btn-gradient hover-icon-reverse" href="#">
+                                        <span class="icon-reverse-wrapper">
+                                            <span class="btn-text">View Course</span>
+                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+
                   </div>
                   <div className="shape-wrapper" id="scene">
                     <img

@@ -33,16 +33,7 @@ const Wish = () => {
           <h4 className="rbt-card-title">
             <a href="course-details.html">Course Name</a>
           </h4>
-          <ul className="rbt-meta">
-            <li>
-              <i className="feather-book" />
-             Number of lessons 
-            </li>
-            <li>
-              <i className="feather-users" />
-              Number of Students
-            </li>
-          </ul>
+       
           <div className="rbt-card-bottom">
             <div className="rbt-price">
               <span className="current-price">$</span>

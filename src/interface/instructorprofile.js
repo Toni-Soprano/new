@@ -1,5 +1,6 @@
 import React from "react";
 import Instructorsidebar from "./components/Instructorsidebar";
+import { Link } from "react-router-dom";
 
 const Instructorprofile = () => {
   return (

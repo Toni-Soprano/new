@@ -1,7 +1,27 @@
-import React from "react";
-import Studentsidebar from "../components/studentsidebar";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Studentquiz = () => {
+  const [quizAttempts, setQuizAttempts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchQuizAttempts = async () => {
+      try {
+        const response = await axios.get("/api/student/quiz-attempts"); // Adjust the URL to your API endpoint
+        setQuizAttempts(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError(err);
+        setLoading(false);
+      }
+    };
+
+    fetchQuizAttempts();
+  }, []);
+
   return (
     <div>
       <meta charSet="utf-8" />
@@ -46,30 +66,15 @@ const Studentquiz = () => {
                       />
                     </div>
                     <div className="tutor-content">
-                      <h5 className="title">Emily Hannah</h5>
+                      <h5 className="title">Student Username</h5>
                       <ul className="rbt-meta rbt-meta-white mt--5">
                         <li>
-                          <i className="feather-book" />5 Courses Enroled
+                          <i className="feather-book" />
                         </li>
                         <li>
-                          <i className="feather-award" />4 Certificate
+                          <i className="feather-award" />
                         </li>
                       </ul>
-                    </div>
-                  </div>
-                  <div className="rbt-tutor-information-right">
-                    <div className="tutor-btn">
-                      <a className="rbt-btn btn-md hover-icon-reverse" href="#">
-                        <span className="icon-reverse-wrapper">
-                          <span className="btn-text">Become an Instructor</span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                        </span>
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -78,7 +83,6 @@ const Studentquiz = () => {
               {/* End Dashboard Top  */}
               <div className="row g-5">
                 <div className="col-lg-3">
-                  {/* Start Dashboard Sidebar  */}
                   <div className="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
                     <div className="inner">
                       <div className="content-item-content">
@@ -91,46 +95,41 @@ const Studentquiz = () => {
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                               <li>
-                                <a href="student-dashboard.html">
+                                <Link to="/studentdash">
                                   <i className="feather-home" />
                                   <span>Dashboard</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-profile.html">
+                                <Link to="/studentprofile">
                                   <i className="feather-user" />
                                   <span>My Profile</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-enrolled-courses.html">
+                                <Link to="/studentcourse">
                                   <i className="feather-book-open" />
                                   <span>Enrolled Courses</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-wishlist.html">
+                                <Link to="/studentwishlist">
                                   <i className="feather-bookmark" />
                                   <span>Wishlist</span>
-                                </a>
+                                </Link>
                               </li>
+
                               <li>
-                                <a href="student-reviews.html">
-                                  <i className="feather-star" />
-                                  <span>Reviews</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="student-my-quiz-attempts.html">
+                                <Link to="/studentquiz">
                                   <i className="feather-help-circle" />
                                   <span>My Quiz Attempts</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-order-history.html">
+                                <Link to="/studentorderhistory">
                                   <i className="feather-shopping-bag" />
                                   <span>Order History</span>
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </nav>
@@ -140,16 +139,16 @@ const Studentquiz = () => {
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                               <li>
-                                <a href="student-settings.html">
+                                <Link to="/studentsettings">
                                   <i className="feather-settings" />
                                   <span>Settings</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="index.html">
+                                <Link to="/">
                                   <i className="feather-log-out" />
                                   <span>Logout</span>
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </nav>
@@ -166,194 +165,40 @@ const Studentquiz = () => {
                       <div className="section-title">
                         <h4 className="rbt-title-style-3">My Quiz Attempts</h4>
                       </div>
-                      <div className="rbt-dashboard-table table-responsive mobile-table-750 mt--30">
-                        <table className="rbt-table table table-borderless">
-                          <thead>
-                            <tr>
-                              <th>Quiz</th>
-                              <th>Qus</th>
-                              <th>TM</th>
-                              <th>CA</th>
-                              <th>Result</th>
-                              <th />
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th>
-                                <p className="b3 mb--5">December 26, 2023</p>
-                                <span className="h6 mb--5">
-                                  Write a short essay on yourself using the 5
-                                </span>
-                                <p className="b3">
-                                  Student: <a href="#">John Due</a>
-                                </p>
-                              </th>
-                              <td>
-                                <p className="b3">4</p>
-                              </td>
-                              <td>
-                                <p className="b3">8</p>
-                              </td>
-                              <td>
-                                <p className="b3">4</p>
-                              </td>
-                              <td>
-                                <span className="rbt-badge-5 bg-color-success-opacity color-success">
-                                  Pass
-                                </span>
-                              </td>
-                              <td>
-                                <div className="rbt-button-group justify-content-end">
-                                  <a
-                                    className="rbt-btn btn-xs bg-primary-opacity radius-round"
-                                    href="#"
-                                    title="Edit"
-                                  >
-                                    <i className="feather-edit pl--0" />
-                                  </a>
-                                  <a
-                                    className="rbt-btn btn-xs bg-color-danger-opacity radius-round color-danger"
-                                    href="#"
-                                    title="Delete"
-                                  >
-                                    <i className="feather-trash-2 pl--0" />
-                                  </a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th>
-                                <p className="b3 mb--5">December 26, 2023</p>
-                                <span className="h6 mb--5">
-                                  Write a short essay on yourself using the 5
-                                </span>
-                                <p className="b3">
-                                  Student: <a href="#">John Due</a>
-                                </p>
-                              </th>
-                              <td>
-                                <p className="b3">4</p>
-                              </td>
-                              <td>
-                                <p className="b3">8</p>
-                              </td>
-                              <td>
-                                <p className="b3">4</p>
-                              </td>
-                              <td>
-                                <span className="rbt-badge-5 bg-color-danger-opacity color-danger">
-                                  Fail
-                                </span>
-                              </td>
-                              <td>
-                                <div className="rbt-button-group justify-content-end">
-                                  <a
-                                    className="rbt-btn btn-xs bg-primary-opacity radius-round"
-                                    href="#"
-                                    title="Edit"
-                                  >
-                                    <i className="feather-edit pl--0" />
-                                  </a>
-                                  <a
-                                    className="rbt-btn btn-xs bg-color-danger-opacity radius-round color-danger"
-                                    href="#"
-                                    title="Delete"
-                                  >
-                                    <i className="feather-trash-2 pl--0" />
-                                  </a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th>
-                                <p className="b3 mb--5">December 26, 2023</p>
-                                <span className="h6 mb--5">
-                                  Write a short essay on yourself using the 5
-                                </span>
-                                <p className="b3">
-                                  Student: <a href="#">John Due</a>
-                                </p>
-                              </th>
-                              <td>
-                                <p className="b3">4</p>
-                              </td>
-                              <td>
-                                <p className="b3">8</p>
-                              </td>
-                              <td>
-                                <p className="b3">4</p>
-                              </td>
-                              <td>
-                                <span className="rbt-badge-5 bg-color-success-opacity color-success">
-                                  Pass
-                                </span>
-                              </td>
-                              <td>
-                                <div className="rbt-button-group justify-content-end">
-                                  <a
-                                    className="rbt-btn btn-xs bg-primary-opacity radius-round"
-                                    href="#"
-                                    title="Edit"
-                                  >
-                                    <i className="feather-edit pl--0" />
-                                  </a>
-                                  <a
-                                    className="rbt-btn btn-xs bg-color-danger-opacity radius-round color-danger"
-                                    href="#"
-                                    title="Delete"
-                                  >
-                                    <i className="feather-trash-2 pl--0" />
-                                  </a>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th>
-                                <p className="b3 mb--5">December 26, 2023</p>
-                                <span className="h6 mb--5">
-                                  Write a short essay on yourself using the 5
-                                </span>
-                                <p className="b3">
-                                  Student: <a href="#">John Due</a>
-                                </p>
-                              </th>
-                              <td>
-                                <p className="b3">4</p>
-                              </td>
-                              <td>
-                                <p className="b3">8</p>
-                              </td>
-                              <td>
-                                <p className="b3">4</p>
-                              </td>
-                              <td>
-                                <span className="rbt-badge-5 bg-color-danger-opacity color-danger">
-                                  Fail
-                                </span>
-                              </td>
-                              <td>
-                                <div className="rbt-button-group justify-content-end">
-                                  <a
-                                    className="rbt-btn btn-xs bg-primary-opacity radius-round"
-                                    href="#"
-                                    title="Edit"
-                                  >
-                                    <i className="feather-edit pl--0" />
-                                  </a>
-                                  <a
-                                    className="rbt-btn btn-xs bg-color-danger-opacity radius-round color-danger"
-                                    href="#"
-                                    title="Delete"
-                                  >
-                                    <i className="feather-trash-2 pl--0" />
-                                  </a>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                      {loading ? (
+                        <p>Loading...</p>
+                      ) : error ? (
+                        <p>Error fetching data</p>
+                      ) : (
+                        <div className="rbt-dashboard-table table-responsive mobile-table-750 mt--30">
+                          {quizAttempts.length > 0 ? (
+                            <table className="rbt-table table table-borderless">
+                              <thead>
+                                <tr>
+                                  <th>Quiz</th>
+                                  <th>Result</th>
+                                  <th />
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {quizAttempts.map((attempt) => (
+                                  <tr key={attempt.id}>
+                                    <td>{attempt.quizTitle}</td>
+                                    <td>{attempt.result}</td>
+                                    <td>
+                                      <Link to={`/quiz-details/${attempt.id}`}>
+                                        View Details
+                                      </Link>
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          ) : (
+                            <p>No quiz attempts found.</p>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                   {/* End Enrole Course  */}

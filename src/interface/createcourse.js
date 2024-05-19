@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Createcourse = () => {
   const [videoSource, setVideoSource] = useState("");
@@ -207,48 +208,8 @@ const Createcourse = () => {
                                             Course difficulty level
                                           </small>
                                         </div>
-                                        <div className="course-field mb--20">
-                                          <label
-                                            className="form-check-label d-inline-block"
-                                            htmlFor="flexSwitchCheckDefault"
-                                          >
-                                            Public Course
-                                          </label>
-                                          <div className="form-check form-switch mb--10">
-                                            <input
-                                              className="form-check-input"
-                                              type="checkbox"
-                                              role="switch"
-                                              id="flexSwitchCheckDefault"
-                                            />
-                                          </div>
-                                          <small>
-                                            <i className="feather-info" /> Make
-                                            This Course Public. No enrollment
-                                            required.
-                                          </small>
-                                        </div>
-                                        <div className="course-field mb--20">
-                                          <label
-                                            className="form-check-label d-inline-block"
-                                            htmlFor="flexSwitchCheckDefault2"
-                                          >
-                                            Q&amp;A
-                                          </label>
-                                          <div className="form-check form-switch mb--10">
-                                            <input
-                                              className="form-check-input"
-                                              type="checkbox"
-                                              role="switch"
-                                              id="flexSwitchCheckDefault2"
-                                            />
-                                          </div>
-                                          <small>
-                                            <i className="feather-info" />{" "}
-                                            Enable Q&amp;A section for your
-                                            course
-                                          </small>
-                                        </div>
+                                        
+                                     
                                       </div>
                                       <div
                                         className="tab-pane fade advance-tab-content-1"
@@ -635,7 +596,7 @@ const Createcourse = () => {
                           aria-expanded="false"
                           aria-controls="accCollapseThree"
                         >
-                          Course Builder
+                          Course Content
                         </button>
                       </h2>
                       <div
@@ -770,27 +731,8 @@ const Createcourse = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-12">
-                            <hr className="mt--10 mb--20" />
-                          </div>
-                          <div className="col-lg-12">
-                            <div className="course-field mb--15">
-                              <label htmlFor="courseTag">Course Tags</label>
-                              <textarea
-                                id="courseTag"
-                                rows={5}
-                                placeholder="Add your course tag here."
-                                defaultValue={""}
-                              />
-                              <small className="d-block mt_dec--5">
-                                <i className="feather-info" /> Maximum of 15
-                                keywords covering features, usage, and styling.
-                                Keywords should all be in lowercase and
-                                separated by commas. e.g. photography, gallery,
-                                modern, jquery, wordpress theme.
-                              </small>
-                            </div>
-                          </div>
+                          
+                      
                           <div className="col-lg-12">
                             <hr className="mt--10 mb--20" />
                           </div>
@@ -883,42 +825,8 @@ const Createcourse = () => {
                                   aria-labelledby="landscape-tab"
                                 >
                                   <div className="row g-5 mt--10">
-                                    {/* Start Single Certificate  */}
-                                    <div className="col-lg-4">
-                                      <div className="certificate-inner rbt-image-checkbox">
-                                        <input
-                                          type="radio"
-                                          id="option1"
-                                          name="radio-group"
-                                          defaultValue="option1"
-                                        />
-                                        <label htmlFor="option1">
-                                          <img
-                                            src="assets/images/icons/certificate-none.svg"
-                                            alt="Certificate Image"
-                                          />
-                                        </label>
-                                      </div>
-                                    </div>
-                                    {/* End Single Certificate  */}
-                                    {/* Start Single Certificate  */}
-                                    <div className="col-lg-4">
-                                      <div className="certificate-inner rbt-image-checkbox">
-                                        <input
-                                          type="radio"
-                                          id="option2"
-                                          name="radio-group"
-                                          defaultValue="option2"
-                                        />
-                                        <label htmlFor="option2">
-                                          <img
-                                            src="assets/images/others/preview-01.png"
-                                            alt="Certificate Image"
-                                          />
-                                        </label>
-                                      </div>
-                                    </div>
-                                    {/* End Single Certificate  */}
+                                   
+                                
                                     {/* Start Single Certificate  */}
                                     <div className="col-lg-4">
                                       <div className="certificate-inner rbt-image-checkbox">
@@ -955,24 +863,7 @@ const Createcourse = () => {
                                       </div>
                                     </div>
                                     {/* End Single Certificate  */}
-                                    {/* Start Single Certificate  */}
-                                    <div className="col-lg-4">
-                                      <div className="certificate-inner rbt-image-checkbox">
-                                        <input
-                                          type="radio"
-                                          id="option5"
-                                          name="radio-group"
-                                          defaultValue="option5"
-                                        />
-                                        <label htmlFor="option5">
-                                          <img
-                                            src="assets/images/others/preview-04.png"
-                                            alt="Certificate Image"
-                                          />
-                                        </label>
-                                      </div>
-                                    </div>
-                                    {/* End Single Certificate  */}
+                                
                                     {/* Start Single Certificate  */}
                                     <div className="col-lg-4">
                                       <div className="certificate-inner rbt-image-checkbox">
@@ -1120,20 +1011,7 @@ const Createcourse = () => {
                 </div>
                 <div className="mt--10 row g-5">
                   <div className="col-lg-4">
-                    <a
-                      className="rbt-btn hover-icon-reverse bg-primary-opacity w-100 text-center"
-                      href="course-details.html"
-                    >
-                      <span className="icon-reverse-wrapper">
-                        <span className="btn-text">Preview</span>
-                        <span className="btn-icon">
-                          <i className="feather-eye" />
-                        </span>
-                        <span className="btn-icon">
-                          <i className="feather-eye" />
-                        </span>
-                      </span>
-                    </a>
+                  
                   </div>
                   <div className="col-lg-8">
                     <a
@@ -1201,150 +1079,10 @@ const Createcourse = () => {
           </div>
         </div>
         {/* Start Modal Area  */}
-        <div
-          className="rbt-default-modal modal fade"
-          id="exampleModal"
-          tabIndex={-1}
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-              <div className="modal-header">
-                <button
-                  type="button"
-                  className="rbt-round-btn"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <i className="feather-x" />
-                </button>
-              </div>
-              <div className="modal-body">
-                <div className="inner rbt-default-form">
-                  <div className="row">
-                    <div className="col-lg-12">
-                      <h5 className="modal-title mb--20" id="exampleModalLabel">
-                        Add Topic
-                      </h5>
-                      <div className="course-field mb--20">
-                        <label htmlFor="modal-field-1">Topic Name</label>
-                        <input id="modal-field-1" type="text" />
-                        <small>
-                          <i className="feather-info" /> Topic titles are
-                          displayed publicly wherever required. Each topic may
-                          contain one or more lessons, quizzes, and assignments.
-                        </small>
-                      </div>
-                      <div className="course-field mb--20">
-                        <label htmlFor="modal-field-2">Topic Summary</label>
-                        <textarea id="modal-field-2" defaultValue={""} />
-                        <small>
-                          <i className="feather-info" /> Add a summary of short
-                          text to prepare students for the activities for the
-                          topic. The text is shown on the course page beside the
-                          tooltip beside the topic name.
-                        </small>
-                      </div>
-
-                      {/* Add Lessons */}
-                      <div className="course-field mb--20">
-                        <button className="btn btn-primary">Add Lessons</button>
-                      </div>
-
-                      {/* Add Quiz */}
-                      <div className="course-field mb--20">
-                        <button className="btn btn-primary">Add Quiz</button>
-                      </div>
-
-                      {/* Add Assignments */}
-                      <div className="course-field mb--20">
-                        <button className="btn btn-primary">
-                          Add Assignments
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="top-circle-shape" />
-              <div className="modal-footer pt--30">
-                <button
-                  type="button"
-                  className="rbt-btn btn-border btn-md radius-round-10"
-                  data-bs-dismiss="modal"
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+ 
         {/* End Modal Area  */}
         {/* Start Modal Area  */}
-        <div
-          className="rbt-default-modal modal fade"
-          id="exampleModal"
-          tabIndex={-1}
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-              <div className="modal-header">
-                <button
-                  type="button"
-                  className="rbt-round-btn"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <i className="feather-x" />
-                </button>
-              </div>
-              <div className="modal-body">
-                <div className="inner rbt-default-form">
-                  <div className="row">
-                    <div className="col-lg-12">
-                      <h5 className="modal-title mb--20" id="exampleModalLabel">
-                        Add Topic
-                      </h5>
-                      <div className="course-field mb--20">
-                        <label htmlFor="modal-field-1">Topic Name</label>
-                        <input id="modal-field-1" type="text" />
-                        <small>
-                          <i className="feather-info" /> Topic titles are
-                          displayed publicly wherever required. Each topic may
-                          contain one or more lessons, quiz and assignments.
-                        </small>
-                      </div>
-                      <div className="course-field mb--20">
-                        <label htmlFor="modal-field-2">Topic Summary</label>
-                        <textarea id="modal-field-2" defaultValue={""} />
-                        <small>
-                          <i className="feather-info" /> Add a summary of short
-                          text to prepare students for the activities for the
-                          topic. The text is shown on the course page beside the
-                          tooltip beside the topic name.
-                        </small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="top-circle-shape" />
-              <div className="modal-footer pt--30">
-                <button
-                  type="button"
-                  className="rbt-btn btn-border btn-md radius-round-10"
-                  data-bs-dismiss="modal"
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      
         {/* End Modal Area  */}
 
         <div className="rbt-separator-mid">
@@ -1364,42 +1102,6 @@ const Createcourse = () => {
                         alt="Logo images"
                       />
                     </a>
-                  </div>
-                  {/* Social icone Area */}
-                  <ul className="social-icon social-default">
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-linkedin-in" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-twitter" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </li>
-                  </ul>
-                  {/* End */}
-                  <div className="text mt--20">
-                    <p>
-                      © 2023{" "}
-                      <a
-                        target="_blank"
-                        href="https://themeforest.net/user/rbt-themes/portfolio"
-                      >
-                        Rainbow-Themes
-                      </a>
-                      . All Rights Reserved.
-                    </p>
                   </div>
                 </div>
               </div>

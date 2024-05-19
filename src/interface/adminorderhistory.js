@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Studentorderhistory = () => {
+const Adminorderhistory = () => {
   return (
     <div>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <title>Student Reviews - Online Courses &amp;</title>
       <meta name="robots" content="noindex, follow" />
       <meta name="description" content="" />
       <meta
@@ -32,15 +31,18 @@ const Studentorderhistory = () => {
                       />
                     </div>
                     <div className="tutor-content">
-                      <h5 className="title">Student username</h5>
-                      <ul className="rbt-meta rbt-meta-white mt--5"></ul>
+                      <h5 className="title">Admin</h5>
+                      <ul className="rbt-meta rbt-meta-white mt--5">
+                      
+                        
+                      </ul>
                     </div>
                   </div>
                   <div className="rbt-tutor-information-right">
                     <div className="tutor-btn">
                       <a className="rbt-btn btn-md hover-icon-reverse" href="#">
                         <span className="icon-reverse-wrapper">
-                          <span className="btn-text">Become an Instructor</span>
+                          <span className="btn-text">Create course</span>
                           <span className="btn-icon">
                             <i className="feather-arrow-right" />
                           </span>
@@ -61,67 +63,66 @@ const Studentorderhistory = () => {
                         <div className="rbt-default-sidebar-wrapper">
                           <div className="section-title mb--20">
                             <h6 className="rbt-title-style-2">
-                              Welcome, Student
+                              Welcome
                             </h6>
                           </div>
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
-                              <li>
-                                <Link to="/studentdash">
-                                  <i className="feather-home" />
-                                  <span>Dashboard</span>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/studentprofile">
-                                  <i className="feather-user" />
-                                  <span>My Profile</span>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/studentcourse">
-                                  <i className="feather-book-open" />
-                                  <span>Enrolled Courses</span>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/studentwishlist">
-                                  <i className="feather-bookmark" />
-                                  <span>Wishlist</span>
-                                </Link>
-                              </li>
-
-                              <li>
-                                <Link to="/studentquiz">
-                                  <i className="feather-help-circle" />
-                                  <span>My Quiz Attempts</span>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/studentorderhistory">
-                                  <i className="feather-shopping-bag" />
-                                  <span>Order History</span>
-                                </Link>
-                              </li>
-                            </ul>
-                          </nav>
-                          <div className="section-title mt--40 mb--20">
-                            <h6 className="rbt-title-style-2">User</h6>
-                          </div>
-                          <nav className="mainmenu-nav">
-                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
-                              <li>
-                                <Link to="/studentsettings">
-                                  <i className="feather-settings" />
-                                  <span>Settings</span>
-                                </Link>
-                              </li>
-                              <li>
-                                <Link to="/">
-                                  <i className="feather-log-out" />
-                                  <span>Logout</span>
-                                </Link>
-                              </li>
+                              {/* Sidebar menu items */}
+                          <li>
+                            <Link to="/Admindash">
+                              <i className="feather-home" />
+                              <span>Dashboard</span>
+                            </Link>
+                          </li>
+                        </ul>
+                      </nav>
+                      <nav className="mainmenu-nav">
+                        <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                          <li>
+                            <Link to="/Admincourse">
+                              <i className="feather-monitor" />
+                              <span>Courses Validation</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/Adminevents">
+                              <i className="feather-volume-2" />
+                              <span>Events Validation</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/Aminannouncement">
+                              <i className="feather-message-square" />
+                              <span>Announcements</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/Adminorderhistory">
+                              <i className="feather-list" />
+                              <span>Order History</span>
+                            </Link>
+                          </li>
+                        </ul>
+                      </nav>
+                      <div className="section-title mt--40 mb--20">
+                        <h6 className="rbt-title-style-2">User</h6>
+                      </div>
+                      <nav className="mainmenu-nav">
+                        <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                          <li>
+                            <Link to="/Adminsettings">
+                              <i className="feather-settings" />
+                              <span>Settings</span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="/">
+                              <i className="feather-log-out" />
+                              <span>Logout</span>
+                            </Link>
+                          </li>
+                              {/* Sidebar menu items */}
                             </ul>
                           </nav>
                         </div>
@@ -176,4 +177,4 @@ const Studentorderhistory = () => {
   );
 };
 
-export default Studentorderhistory;
+export default Adminorderhistory;

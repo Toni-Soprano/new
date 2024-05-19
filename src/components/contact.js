@@ -24,7 +24,7 @@ const Contact = () => {
                   Contact Us
                 </span>
                 <h2 className="title">
-                  Histudy Course Contact <br /> can join with us.
+                 Learnify contact <br /> 
                 </h2>
               </div>
             </div>

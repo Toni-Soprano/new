@@ -1,8 +1,8 @@
 import React from "react";
-import Studentsidebar from "../components/studentsidebar.js";
 import Updatepassword from "../components/updatepassword.js";
 import Profile from "../components/profile.js";
 import Socialshare from "../components/Socialshare.js";
+import { Link } from "react-router-dom";
 
 const Studentsettings = () => {
   return (
@@ -35,7 +35,6 @@ const Studentsettings = () => {
             <div className="col-lg-12">
               {/* Start Dashboard Top  */}
               <div className="rbt-dashboard-content-wrapper">
-                <div className="tutor-bg-photo bg_image bg_image--23 height-350" />
                 {/* Start Tutor Information  */}
                 <div className="rbt-tutor-information">
                   <div className="rbt-tutor-information-left">
@@ -49,27 +48,12 @@ const Studentsettings = () => {
                       <h5 className="title">Student name</h5>
                       <ul className="rbt-meta rbt-meta-white mt--5">
                         <li>
-                          <i className="feather-book" />5 Courses Enroled
+                          <i className="feather-book" />
                         </li>
                         <li>
-                          <i className="feather-award" />4 Certificate
+                          <i className="feather-award" />
                         </li>
                       </ul>
-                    </div>
-                  </div>
-                  <div className="rbt-tutor-information-right">
-                    <div className="tutor-btn">
-                      <a className="rbt-btn btn-md hover-icon-reverse" href="#">
-                        <span className="icon-reverse-wrapper">
-                          <span className="btn-text">Become an Instructor</span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                        </span>
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -91,46 +75,41 @@ const Studentsettings = () => {
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                               <li>
-                                <a href="student-dashboard.html">
+                                <Link to="/studentdash">
                                   <i className="feather-home" />
                                   <span>Dashboard</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-profile.html">
+                                <Link to="/studentprofile">
                                   <i className="feather-user" />
                                   <span>My Profile</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-enrolled-courses.html">
+                                <Link to="/studentcourse">
                                   <i className="feather-book-open" />
                                   <span>Enrolled Courses</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-wishlist.html">
+                                <Link to="/studentwishlist">
                                   <i className="feather-bookmark" />
                                   <span>Wishlist</span>
-                                </a>
+                                </Link>
                               </li>
+
                               <li>
-                                <a href="student-reviews.html">
-                                  <i className="feather-star" />
-                                  <span>Reviews</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="student-my-quiz-attempts.html">
+                                <Link to="/studentquiz">
                                   <i className="feather-help-circle" />
                                   <span>My Quiz Attempts</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-order-history.html">
+                                <Link to="/studentorderhistory">
                                   <i className="feather-shopping-bag" />
                                   <span>Order History</span>
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </nav>
@@ -140,16 +119,16 @@ const Studentsettings = () => {
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                               <li>
-                                <a href="student-settings.html">
+                                <Link to="/studentsettings">
                                   <i className="feather-settings" />
                                   <span>Settings</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="index.html">
+                                <Link to="/">
                                   <i className="feather-log-out" />
                                   <span>Logout</span>
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </nav>
@@ -234,54 +213,10 @@ const Studentsettings = () => {
                             aria-labelledby="password-tab"
                           >
                             {/* Start Profile Row  */}
-                            <form
-                              action="#"
-                              className="rbt-profile-row rbt-default-form row row--15"
-                            >
-                              <div className="col-12">
-                                <div className="rbt-form-group">
-                                  <label htmlFor="currentpassword">
-                                    Current Password
-                                  </label>
-                                  <input
-                                    id="currentpassword"
-                                    type="password"
-                                    placeholder="Current Password"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-12">
-                                <div className="rbt-form-group">
-                                  <label htmlFor="newpassword">
-                                    New Password
-                                  </label>
-                                  <input
-                                    id="newpassword"
-                                    type="password"
-                                    placeholder="New Password"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-12">
-                                <div className="rbt-form-group">
-                                  <label htmlFor="retypenewpassword">
-                                    Re-type New Password
-                                  </label>
-                                  <input
-                                    id="retypenewpassword"
-                                    type="password"
-                                    placeholder="Re-type New Password"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-12 mt--10">
-                                <div className="rbt-form-group">
-                                  <a className="rbt-btn btn-gradient" href="#">
-                                    Update Password
-                                  </a>
-                                </div>
-                              </div>
-                            </form>
+                            <div className="rbt-dashboard-content-wrapper">
+                              <div className="tutor-bg-photo bg_image bg_image--23 height-245" />
+                              <Updatepassword />
+                            </div>
                             {/* End Profile Row  */}
                           </div>
                           <div
@@ -291,78 +226,10 @@ const Studentsettings = () => {
                             aria-labelledby="social-tab"
                           >
                             {/* Start Profile Row  */}
-                            <form
-                              action="#"
-                              className="rbt-profile-row rbt-default-form row row--15"
-                            >
-                              <div className="col-12">
-                                <div className="rbt-form-group">
-                                  <label htmlFor="facebook">
-                                    <i className="feather-facebook" /> Facebook
-                                  </label>
-                                  <input
-                                    id="facebook"
-                                    type="text"
-                                    placeholder="https://facebook.com/"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-12">
-                                <div className="rbt-form-group">
-                                  <label htmlFor="twitter">
-                                    <i className="feather-twitter" /> Twitter
-                                  </label>
-                                  <input
-                                    id="twitter"
-                                    type="text"
-                                    placeholder="https://twitter.com/"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-12">
-                                <div className="rbt-form-group">
-                                  <label htmlFor="linkedin">
-                                    <i className="feather-linkedin" /> Linkedin
-                                  </label>
-                                  <input
-                                    id="linkedin"
-                                    type="text"
-                                    placeholder="https://linkedin.com/"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-12">
-                                <div className="rbt-form-group">
-                                  <label htmlFor="website">
-                                    <i className="feather-globe" /> Website
-                                  </label>
-                                  <input
-                                    id="website"
-                                    type="text"
-                                    placeholder="https://website.com/"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-12">
-                                <div className="rbt-form-group">
-                                  <label htmlFor="github">
-                                    <i className="feather-github" /> Github
-                                  </label>
-                                  <input
-                                    id="github"
-                                    type="text"
-                                    placeholder="https://github.com/"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-12 mt--10">
-                                <div className="rbt-form-group">
-                                  <a className="rbt-btn btn-gradient" href="#">
-                                    Update Profile
-                                  </a>
-                                </div>
-                              </div>
-                            </form>
+                            <div className="rbt-dashboard-content-wrapper">
+                              <div className="tutor-bg-photo bg_image bg_image--23 height-245" />
+                              <Socialshare/>
+                            </div>
                             {/* End Profile Row  */}
                           </div>
                         </div>

@@ -1,7 +1,5 @@
 import React from "react";
-import Completedcourse from "../components/Completedcourse";
-import Adminsidebar from "../components/adminsidebar";
-
+import { Link } from "react-router-dom";
 
 const Admindash = () => {
   return (
@@ -36,7 +34,6 @@ const Admindash = () => {
             <div className="col-lg-12">
               {/* Start Dashboard Top  */}
               <div className="rbt-dashboard-content-wrapper">
-                <div className="tutor-bg-photo bg_image bg_image--22 height-350" />
                 {/* Start Tutor Information  */}
                 <div className="rbt-tutor-information">
                   <div className="rbt-tutor-information-left">
@@ -47,42 +44,90 @@ const Admindash = () => {
                       />
                     </div>
                     <div className="tutor-content">
-                      <h5 className="title">Admin</h5>
-                      <div className="rbt-review">
-                        <div className="rating">
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                        </div>
-                        <span className="rating-count"> (15 Reviews)</span>
-                      </div>
+                      <h5 className="title" style={{ color: "purple" }}>
+                        ADMIN
+                      </h5>
+                      <div className="rbt-review"></div>
                     </div>
                   </div>
                   <div className="rbt-tutor-information-right">
-                    <div className="tutor-btn">
-                      <a
-                        className="rbt-btn btn-md hover-icon-reverse"
-                        href="create-course.html"
-                      >
-                        <span className="icon-reverse-wrapper">
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                        </span>
-                      </a>
-                    </div>
+                    <div className="tutor-btn"></div>
                   </div>
                 </div>
                 {/* End Tutor Information  */}
               </div>
               {/* End Dashboard Top  */}
               <div className="row g-5">
-                <Adminsidebar/>
+                <div className="col-lg-3">
+                  <div className="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
+                    <div className="inner">
+                      <div className="content-item-content">
+                        <div className="rbt-default-sidebar-wrapper">
+                          <div className="section-title mb--20">
+                            <h6 className="rbt-title-style-2">Welcome</h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/Admindash">
+                                  <i className="feather-home" />
+                                  <span>Dashboard</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/Admincourse">
+                                  <i className="feather-monitor" />
+                                  <span>Courses Validation</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/Adminevents">
+                                  <i className="feather-volume-2" />
+                                  <span>Events Validation</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/Aminannouncement">
+                                  <i className="feather-message-square" />
+                                  <span>Announcements</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/Adminorderhistory">
+                                  <i className="feather-list" />
+                                  <span>Order History</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                          <div className="section-title mt--40 mb--20">
+                            <h6 className="rbt-title-style-2">User</h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/Adminsettings">
+                                  <i className="feather-settings" />
+                                  <span>Settings</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/">
+                                  <i className="feather-log-out" />
+                                  <span>Logout</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="col-lg-9">
                   <div className="rbt-dashboard-content bg-color-white rbt-shadow-box mb--60">
                     <div className="content">
@@ -101,8 +146,8 @@ const Admindash = () => {
                                   </span>
                                 </h3>
                                 <span className="rbt-title-style-2 d-block">
-                                  Total Courses   
-                                                               </span>
+                                  Total Courses
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -122,7 +167,7 @@ const Admindash = () => {
                                   </span>
                                 </h3>
                                 <span className="rbt-title-style-2 d-block">
-                               Total Instuctors
+                                  Total Instuctors
                                 </span>
                               </div>
                             </div>
@@ -130,7 +175,7 @@ const Admindash = () => {
                         </div>
                         {/* End Single Card  */}
                         {/* Start Single Card  */}
-                                                <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+                        <div className="col-lg-4 col-md-4 col-sm-6 col-12">
                           <div className="rbt-counterup variation-01 rbt-hover-03 rbt-border-dashed bg-pink-opacity">
                             <div className="inner">
                               <div className="rbt-round-icon bg-pink-opacity">
@@ -174,45 +219,6 @@ const Admindash = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="rbt-dashboard-content bg-color-white rbt-shadow-box mb--60">
-                    <div className="content">
-                      <div className="row">
-                        <div className="col-lg-12">
-                          <div className="section-title">
-                            <h4 className="rbt-title-style-3">My Courses</h4>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row gy-5">
-                        <div className="col-lg-12">
-                          <div className="rbt-dashboard-table table-responsive">
-                            <table className="rbt-table table table-borderless">
-                              <thead>
-                                <tr>
-                                  <th>Course Name</th>
-                                  <th>Enrolled</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th>
-                                    <a href="#">Course Name</a>
-                                  </th>
-                                  <td>Number</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          <div className="load-more-btn text-center">
-                            <a className="rbt-btn-link" href="#">
-                              Browse All Course
-                              <i className="feather-arrow-right" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -227,12 +233,17 @@ const Admindash = () => {
       </div>
       <div className="rbt-progress-parent">
         <svg
-          className="rbt-back-circle svg-inner"
-          width="100%"
-          height="100%"
-          viewBox="-1 -1 102 102"
+          className="rbt-progress-line-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
         >
-          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+          <line
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="0%"
+            className="rbt-progress-line"
+          />
         </svg>
       </div>
     </div>

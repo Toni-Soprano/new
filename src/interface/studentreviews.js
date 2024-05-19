@@ -1,5 +1,5 @@
 import React from "react";
-import Studentsidebar from "../components/studentsidebar";
+import { Link } from "react-router-dom";
 
 const Studentreviews = () => {
   return (
@@ -90,13 +90,13 @@ const Studentreviews = () => {
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                               <li>
-                                <a href="student-dashboard.html">
+                                <a href="studentdash">
                                   <i className="feather-home" />
                                   <span>Dashboard</span>
                                 </a>
                               </li>
                               <li>
-                                <a href="student-profile.html">
+                                <a href="studentprofile.">
                                   <i className="feather-user" />
                                   <span>My Profile</span>
                                 </a>
@@ -111,12 +111,6 @@ const Studentreviews = () => {
                                 <a href="student-wishlist.html">
                                   <i className="feather-bookmark" />
                                   <span>Wishlist</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="student-reviews.html">
-                                  <i className="feather-star" />
-                                  <span>Reviews</span>
                                 </a>
                               </li>
                               <li>

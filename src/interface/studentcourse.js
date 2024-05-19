@@ -1,9 +1,10 @@
 import React from "react";
 import Completedcourse from "../components/Completedcourse.js";
+import { Link } from "react-router-dom";
 
 const Studentcourse = () => {
   return (
-    <div>          
+    <div>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <title>
@@ -85,52 +86,47 @@ const Studentcourse = () => {
                         <div className="rbt-default-sidebar-wrapper">
                           <div className="section-title mb--20">
                             <h6 className="rbt-title-style-2">
-                              Welcome, Jone Due
+                              Welcome, Student
                             </h6>
                           </div>
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                               <li>
-                                <a href="student-dashboard.html">
+                                <Link to="/studentdash">
                                   <i className="feather-home" />
                                   <span>Dashboard</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-profile.html">
+                                <Link to="/studentprofile">
                                   <i className="feather-user" />
                                   <span>My Profile</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-enrolled-courses.html">
+                                <Link to="/studentcourse">
                                   <i className="feather-book-open" />
                                   <span>Enrolled Courses</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-wishlist.html">
+                                <Link to="/studentwishlist">
                                   <i className="feather-bookmark" />
                                   <span>Wishlist</span>
-                                </a>
+                                </Link>
                               </li>
+
                               <li>
-                                <a href="student-reviews.html">
-                                  <i className="feather-star" />
-                                  <span>Reviews</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="student-my-quiz-attempts.html">
+                                <Link to="/studentquiz">
                                   <i className="feather-help-circle" />
                                   <span>My Quiz Attempts</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="student-order-history.html">
+                                <Link to="/studentorderhistory">
                                   <i className="feather-shopping-bag" />
                                   <span>Order History</span>
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </nav>
@@ -140,16 +136,16 @@ const Studentcourse = () => {
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                               <li>
-                                <a href="student-settings.html">
+                                <Link to="/studentsettings">
                                   <i className="feather-settings" />
                                   <span>Settings</span>
-                                </a>
+                                </Link>
                               </li>
                               <li>
-                                <a href="index.html">
+                                <Link to="/">
                                   <i className="feather-log-out" />
                                   <span>Logout</span>
-                                </a>
+                                </Link>
                               </li>
                             </ul>
                           </nav>
@@ -158,63 +154,97 @@ const Studentcourse = () => {
                     </div>
                   </div>
                   {/* End Dashboard Sidebar  */}
+                </div>
+                <div className="col-lg-9">
+                  {/* Start Enrole Course  */}
+                  <div className="rbt-dashboard-content bg-color-white rbt-shadow-box">
+                    <div className="content">
+                      <div className="section-title">
+                        <h4 className="rbt-title-style-3">Enrolled Courses</h4>
+                      </div>
+                      <div className="advance-tab-button mb--30">
+                        <ul
+                          className="nav nav-tabs tab-button-style-2 justify-content-start"
+                          id="myTab-4"
+                          role="tablist"
+                        >
+                          <li role="presentation">
+                            <a
+                              href="#"
+                              className="tab-button active"
+                              id="home-tab-4"
+                              data-bs-toggle="tab"
+                              data-bs-target="#home-4"
+                              role="tab"
+                              aria-controls="home-4"
+                              aria-selected="true"
+                            >
+                              <span className="title">Enrolled Courses</span>
+                              <ecourse></ecourse>
+                            </a>
+                          </li>
+
+                          <li role="presentation">
+                            <a
+                              href="#"
+                              className="tab-button"
+                              id="contact-tab-4"
+                              data-bs-toggle="tab"
+                              data-bs-target="#contact-4"
+                              role="tab"
+                              aria-controls="contact-4"
+                              aria-selected="false"
+                            >
+                              <span className="title">Completed Courses</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="tab-content">
+                        <div
+                          className="tab-pane fade active show"
+                          id="home-4"
+                          role="tabpanel"
+                          aria-labelledby="home-tab-4"
+                        >
+                          <div className="row g-5">
+                            <Completedcourse />
+                          </div>
                         </div>
-            <div className="col-lg-9">
-              {/* Start Enrole Course  */}
-              <div className="rbt-dashboard-content bg-color-white rbt-shadow-box">
-                <div className="content">
-                  <div className="section-title">
-                    <h4 className="rbt-title-style-3">Enrolled Courses</h4>
-                  </div>
-                  <div className="advance-tab-button mb--30">
-                    <ul className="nav nav-tabs tab-button-style-2 justify-content-start" id="myTab-4" role="tablist">
-                      <li role="presentation">
-                        <a href="#" className="tab-button active" id="home-tab-4" data-bs-toggle="tab" data-bs-target="#home-4" role="tab" aria-controls="home-4" aria-selected="true">
-                          <span className="title">Enrolled Courses</span>
-                          <ecourse>
-                          </ecourse></a>
-                      </li>
-
-                      <li role="presentation">
-                        <a href="#" className="tab-button" id="contact-tab-4" data-bs-toggle="tab" data-bs-target="#contact-4" role="tab" aria-controls="contact-4" aria-selected="false">
-                          <span className="title">Completed Courses</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="tab-content">
-                    <div className="tab-pane fade active show" id="home-4" role="tabpanel" aria-labelledby="home-tab-4">
-                      <div className="row g-5">
-                   <Completedcourse/>
-                      </div>
-                    </div>
-                    <div className="tab-pane fade" id="profile-4" role="tabpanel" aria-labelledby="profile-tab-4">
-                      <div className="row g-5">
-                      </div>
-                    </div>
-                    <div className="tab-pane fade" id="contact-4" role="tabpanel" aria-labelledby="contact-tab-4">
-                      <div className="row g-5">
-
-                      <Completedcourse/>
-
+                        <div
+                          className="tab-pane fade"
+                          id="profile-4"
+                          role="tabpanel"
+                          aria-labelledby="profile-tab-4"
+                        >
+                          <div className="row g-5"></div>
+                        </div>
+                        <div
+                          className="tab-pane fade"
+                          id="contact-4"
+                          role="tabpanel"
+                          aria-labelledby="contact-tab-4"
+                        >
+                          <div className="row g-5">
+                            <Completedcourse />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  {/* End Enrole Course  */}
                 </div>
               </div>
-              {/* End Enrole Course  */}
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  {/* End Card Style */}
-  <div className="rbt-separator-mid">
-    <div className="container">
-      <hr className="rbt-separator m-0" />
-    </div>
-  </div>
+      {/* End Card Style */}
+      <div className="rbt-separator-mid">
+        <div className="container">
+          <hr className="rbt-separator m-0" />
+        </div>
+      </div>
       {/* Start Footer aera */}
       <footer className="rbt-footer footer-style-1 bg-color-white overflow-hidden">
         <div className="footer-top">

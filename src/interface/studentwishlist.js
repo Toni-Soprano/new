@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Studentwishlist = () => {
   return (
@@ -76,83 +77,79 @@ const Studentwishlist = () => {
               {/* End Dashboard Top  */}
               <div className="row g-5">
                 <div className="col-lg-3">
-    <div className="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
-      <div className="inner">
-        <div className="content-item-content">
-          <div className="rbt-default-sidebar-wrapper">
-            <div className="section-title mb--20">
-              <h6 className="rbt-title-style-2">Welcome, Student</h6>
-            </div>
-            <nav className="mainmenu-nav">
-              <ul className="dashboard-mainmenu rbt-default-sidebar-list">
-                <li>
-                  <a href="student-dashboard.html">
-                    <i className="feather-home" />
-                    <span>Dashboard</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="student-profile.html">
-                    <i className="feather-user" />
-                    <span>My Profile</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="student-enrolled-courses.html">
-                    <i className="feather-book-open" />
-                    <span>Enrolled Courses</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="student-wishlist.html">
-                    <i className="feather-bookmark" />
-                    <span>Wishlist</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="student-reviews.html">
-                    <i className="feather-star" />
-                    <span>Reviews</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="student-my-quiz-attempts.html">
-                    <i className="feather-help-circle" />
-                    <span>My Quiz Attempts</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="student-order-history.html">
-                    <i className="feather-shopping-bag" />
-                    <span>Order History</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <div className="section-title mt--40 mb--20">
-              <h6 className="rbt-title-style-2">User</h6>
-            </div>
-            <nav className="mainmenu-nav">
-              <ul className="dashboard-mainmenu rbt-default-sidebar-list">
-                <li>
-                  <a href="student-settings.html">
-                    <i className="feather-settings" />
-                    <span>Settings</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="index.html">
-                    <i className="feather-log-out" />
-                    <span>Logout</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
+                  <div className="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
+                    <div className="inner">
+                      <div className="content-item-content">
+                        <div className="rbt-default-sidebar-wrapper">
+                          <div className="section-title mb--20">
+                            <h6 className="rbt-title-style-2">
+                              Welcome, Student
+                            </h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/studentdash">
+                                  <i className="feather-home" />
+                                  <span>Dashboard</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/studentprofile">
+                                  <i className="feather-user" />
+                                  <span>My Profile</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/studentcourse">
+                                  <i className="feather-book-open" />
+                                  <span>Enrolled Courses</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/studentwishlist">
+                                  <i className="feather-bookmark" />
+                                  <span>Wishlist</span>
+                                </Link>
+                              </li>
 
+                              <li>
+                                <Link to="/studentquiz">
+                                  <i className="feather-help-circle" />
+                                  <span>My Quiz Attempts</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/studentorderhistory">
+                                  <i className="feather-shopping-bag" />
+                                  <span>Order History</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                          <div className="section-title mt--40 mb--20">
+                            <h6 className="rbt-title-style-2">User</h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/studentsettings">
+                                  <i className="feather-settings" />
+                                  <span>Settings</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/">
+                                  <i className="feather-log-out" />
+                                  <span>Logout</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
                   {/* End Dashboard Sidebar  */}
                 </div>
@@ -163,9 +160,7 @@ const Studentwishlist = () => {
                       <div className="section-title">
                         <h4 className="rbt-title-style-3">Wishlist</h4>
                       </div>
-                      <div className="row g-5">
-                       *
-                      </div>
+                      <div className="row g-5">*</div>
                     </div>
                   </div>
                   {/* End Enrole Course  */}

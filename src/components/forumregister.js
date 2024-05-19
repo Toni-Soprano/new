@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Forumregister = () => {
   const [userData, setUserData] = useState(null);
@@ -16,8 +17,8 @@ const Forumregister = () => {
     try {
       const response = await axios.post(API_URL, formData, {
         headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+          "Content-Type": "multipart/form-data",
+        },
       });
       setUserData(response.data);
     } catch (error) {
@@ -36,22 +37,50 @@ const Forumregister = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (role === "instructor" && !cvFile) {
-      setError("Please upload a CV for instructor role.");
+    const email = event.target["register-email"].value;
+    const username = event.target["register_user"].value;
+    const password = event.target["register_password"].value;
+    const confirmPassword = event.target["register_conpassword"].value;
+
+    if (!email.includes("@")) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+
+    // Add logic to check if username is unique and not used before
+    const isUsernameUnique = await checkUsernameUnique(username);
+    if (!isUsernameUnique) {
+      setError(
+        "Username is already taken. Please choose a different username."
+      );
       return;
     }
 
     const formData = new FormData();
-    formData.append("register_email", event.target["register-email"].value);
-    formData.append("register_user", event.target["register_user"].value);
-    formData.append("register_password", event.target["register_password"].value);
-    formData.append("register_conpassword", event.target["register_conpassword"].value);
+    formData.append("register_email", email);
+    formData.append("register_user", username);
+    formData.append("register_password", password);
+    formData.append("register_conpassword", confirmPassword);
     formData.append("role", role);
     if (role === "instructor") {
       formData.append("cvFile", cvFile);
     }
 
     registerUser(formData);
+  };
+
+  const checkUsernameUnique = async (username) => {
+    // Add logic to check if username is unique by sending a request to your backend API
+    // Example:
+    const response = await axios.get(
+      `http://localhost:8080/checkUsername?username=${username}`
+    );
+    return response.data.unique; // Assuming the backend responds with a JSON object like { unique: true }
   };
 
   return (
@@ -70,7 +99,7 @@ const Forumregister = () => {
         {!userData && (
           <form className="max-width-auto" onSubmit={handleSubmit}>
             <div className="form-group">
-              <input name="register-email" type="text" required />
+              <input name="register-email" type="email" required />
               <label>Email address *</label>
               <span className="focus-border" />
             </div>
@@ -132,6 +161,11 @@ const Forumregister = () => {
               >
                 {loading ? "Loading..." : "Register"}
               </button>
+            </div>
+            <div className="form-group">
+              <p>
+                Already have an account? <Link to="/forumlogin">Log in</Link>
+              </p>
             </div>
           </form>
         )}

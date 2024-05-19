@@ -46,7 +46,7 @@ const AddLesson = () => {
         },
       });
       console.log("Lessons submitted successfully:", response.data);
-      // Clear the form
+    
       setLessons([]);
     } catch (error) {
       console.error("Error submitting lessons:", error);

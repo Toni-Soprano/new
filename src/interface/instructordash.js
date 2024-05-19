@@ -1,5 +1,6 @@
 import React from "react";
 import Instructorsidebar from "../components/instructorsidebar";
+import { Link } from "react-router-dom";
 
 const Instructordash = () => {
   return (
