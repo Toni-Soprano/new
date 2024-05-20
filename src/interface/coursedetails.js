@@ -49,7 +49,7 @@ const Coursedetails = () => {
                     </div>
                   </li>
                 </ul>
-                <h2 className="title">Course Title </h2>
+                <h2 className="Course Title">Course Title </h2>
                 <p className="description">About course</p>
                 <div className="d-flex align-items-center mb--20 flex-wrap rbt-course-details-feature">
                   <div className="feature-sin best-seller-badge">
@@ -94,8 +94,8 @@ const Coursedetails = () => {
                       />
                     </a>
                   </div>
-                  <div className="rbt-author-info">
-                    By <a href="">Instructor username</a>
+                  <div className="Instructor Username">
+                    By <a href=""></a>
                   </div>
                 </div>
                 <ul className="rbt-meta">
@@ -153,7 +153,7 @@ const Coursedetails = () => {
                     <div className="section-title">
                       <h4 className="rbt-title-style-3">What you'll learn</h4>
                     </div>
-                    <p></p>
+                    <p className=""></p>
                     <div className="row g-5 mb--30">
                       {/* Start Feture Box  */}
 
@@ -209,7 +209,7 @@ const Coursedetails = () => {
                                   <a href="lesson.html">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle" />{" "}
-                                      <span className="text">Course Intro</span>
+                                      <span className="Course Intro">Course Intro</span>
                                     </div>
                                     <div className="course-content-right">
                                       <span className="course-lock">
@@ -219,22 +219,10 @@ const Coursedetails = () => {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="lesson.html">
-                                    <div className="course-content-left">
-                                      <i className="feather-file-text" />{" "}
-                                      <span className="text">
-                                        Read Before You Start
-                                      </span>
-                                    </div>
-                                    <div className="course-content-right">
-                                      <span className="course-lock">
-                                        <i className="feather-lock" />
-                                      </span>
-                                    </div>
-                                  </a>
+                                 
                                 </li>
                                 <li>
-                                  <a href="lesson.html">
+                                  <a href="lesson">
                                     <div className="course-content-left">
                                       <i className="feather-play-circle" />{" "}
                                       <span className="text">

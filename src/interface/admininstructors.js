@@ -2,61 +2,65 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const Adminevents = () => {
-  const [events, setEvents] = useState([]); // State for storing events
+const AdminInstructors = () => {
+  const [instructors, setInstructors] = useState([]); // State for storing instructors
 
   useEffect(() => {
-    // Function to fetch events from the API
-    const fetchEvents = async () => {
+    // Function to fetch instructors from the API
+    const fetchInstructors = async () => {
       try {
-        // Make API call to fetch events
-        const response = await axios.get("https://api.example.com/events");
-        // Update events state with fetched data
-        setEvents(response.data); // Assuming API response returns an array of events
+        // Make API call to fetch instructors
+        const response = await axios.get("https://api.example.com/instructors");
+        // Update instructors state with fetched data
+        setInstructors(response.data); // Assuming API response returns an array of instructors
       } catch (error) {
-        console.error("Error fetching events:", error);
+        console.error("Error fetching instructors:", error);
       }
     };
 
-    // Call fetchEvents function when component mounts
-    fetchEvents();
+    // Call fetchInstructors function when component mounts
+    fetchInstructors();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Empty dependency array ensures this effect runs only once on component mount
 
-  const handleApproveEvent = (eventId) => {
-    // Logic to update event status to 'approved' in the backend
+  const handleApproveInstructor = (instructorId) => {
+    // Logic to update instructor status to 'approved' in the backend
     axios
-      .patch(`https://api.example.com/events/${eventId}`, {
+      .patch(`https://api.example.com/instructors/${instructorId}`, {
         status: "approved",
       })
       .then((response) => {
-        console.log(`Event ${eventId} approved successfully`);
-        // Update the events state
-        setEvents((prevEvents) =>
-          prevEvents.map((event) =>
-            event.id === eventId ? { ...event, status: "approved" } : event
+        console.log(`Instructor ${instructorId} approved successfully`);
+        // Update the instructors state
+        setInstructors((prevInstructors) =>
+          prevInstructors.map((instructor) =>
+            instructor.id === instructorId
+              ? { ...instructor, status: "approved" }
+              : instructor
           )
         );
       })
       .catch((error) => {
-        console.error(`Error approving event ${eventId}:`, error);
+        console.error(`Error approving instructor ${instructorId}:`, error);
       });
   };
 
-  const handleRejectEvent = (eventId) => {
-    // Logic to delete event or update status to 'rejected' in the backend
+  const handleRejectInstructor = (instructorId) => {
+    // Logic to delete instructor or update status to 'rejected' in the backend
     axios
-      .delete(`https://api.example.com/events/${eventId}`)
+      .delete(`https://api.example.com/instructors/${instructorId}`)
       .then((response) => {
-        console.log(`Event ${eventId} rejected or deleted successfully`);
-        // Update events state by filtering out the rejected event
-        setEvents((prevEvents) =>
-          prevEvents.filter((event) => event.id !== eventId)
+        console.log(
+          `Instructor ${instructorId} rejected or deleted successfully`
+        );
+        // Update instructors state by filtering out the rejected instructor
+        setInstructors((prevInstructors) =>
+          prevInstructors.filter((instructor) => instructor.id !== instructorId)
         );
       })
       .catch((error) => {
-        console.error(`Error rejecting event ${eventId}:`, error);
+        console.error(`Error rejecting instructor ${instructorId}:`, error);
       });
   };
 
@@ -169,12 +173,7 @@ const Adminevents = () => {
                       </div>
                       <nav className="mainmenu-nav">
                         <ul className="dashboard-mainmenu rbt-default-sidebar-list">
-                          <li>
-                            <Link to="/Adminsettings">
-                              <i className="feather-settings" />
-                              <span>Settings</span>
-                            </Link>
-                          </li>
+                         
                           <li>
                             <Link to="/">
                               <i className="feather-log-out" />
@@ -189,13 +188,15 @@ const Adminevents = () => {
               </div>
             </div>
             <div className="col-lg-9">
-              {/* Render event validation table */}
+              {/* Render instructor validation table */}
               <div className="rbt-dashboard-content bg-color-white rbt-shadow-box mb--60">
                 <div className="content">
                   <div className="row">
                     <div className="col-lg-12">
                       <div className="section-title">
-                        <h4 className="rbt-title-style-3">Event Validation</h4>
+                        <h4 className="rbt-title-style-3">
+                          Instructor Validation
+                        </h4>
                       </div>
                     </div>
                   </div>
@@ -205,27 +206,35 @@ const Adminevents = () => {
                         <table className="rbt-table table table-borderless">
                           <thead>
                             <tr>
-                              <th>Event Name</th>
-                              <th>Title</th>
+                              <th>Instructor Name</th>
+                              <th>CV</th>
                               <th>Status</th>
                               <th>Action</th>
                             </tr>
                           </thead>
                           <tbody>
-                            {/* Loop through events array and render each event */}
-                            {events.map((event) => (
-                              <tr key={event.id}>
-                                <td>{event.name}</td>
-                                <td>{event.title}</td>
-                                <td>{event.status}</td>
+                            {/* Loop through instructors array and render each instructor */}
+                            {instructors.map((instructor) => (
+                              <tr key={instructor.id}>
+                                <td>{instructor.name}</td>
                                 <td>
-                                  {/* Render approve/reject buttons based on event status */}
-                                  {event.status === "pending" && (
+                                  <a
+                                    href={instructor.cvUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    View CV
+                                  </a>
+                                </td>
+                                <td>{instructor.status}</td>
+                                <td>
+                                  {/* Render approve/reject buttons based on instructor status */}
+                                  {instructor.status === "pending" && (
                                     <>
                                       <button
                                         className="btn btn-success"
                                         onClick={() =>
-                                          handleApproveEvent(event.id)
+                                          handleApproveInstructor(instructor.id)
                                         }
                                       >
                                         Approve
@@ -234,7 +243,9 @@ const Adminevents = () => {
                                   )}
                                   <button
                                     className="btn btn-danger"
-                                    onClick={() => handleRejectEvent(event.id)}
+                                    onClick={() =>
+                                      handleRejectInstructor(instructor.id)
+                                    }
                                   >
                                     Reject
                                   </button>
@@ -248,7 +259,7 @@ const Adminevents = () => {
                   </div>
                 </div>
               </div>
-              {/* End event validation table */}
+              {/* End instructor validation table */}
             </div>
           </div>
         </div>
@@ -258,4 +269,4 @@ const Adminevents = () => {
   );
 };
 
-export default Adminevents;
+export default AdminInstructors;

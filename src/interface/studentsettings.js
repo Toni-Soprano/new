@@ -1,15 +1,18 @@
 import React from "react";
+import Instructorsidebar from "../components/instructorsidebar.js";
 import Updatepassword from "../components/updatepassword.js";
 import Profile from "../components/profile.js";
 import Socialshare from "../components/Socialshare.js";
 import { Link } from "react-router-dom";
 
-const Studentsettings = () => {
+const Instructorsettings = () => {
   return (
-    <>
+    <div>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <title>Student Reviews - Online Courses &amp;</title>
+      <title>
+        Admin Dashboard - Online Courses &amp; Education Bootstrap5 Template
+      </title>
       <meta name="robots" content="noindex, follow" />
       <meta name="description" content />
       <meta
@@ -35,25 +38,35 @@ const Studentsettings = () => {
             <div className="col-lg-12">
               {/* Start Dashboard Top  */}
               <div className="rbt-dashboard-content-wrapper">
+                <div className="tutor-bg-photo bg_image bg_image--22 height-350" />
                 {/* Start Tutor Information  */}
                 <div className="rbt-tutor-information">
                   <div className="rbt-tutor-information-left">
                     <div className="thumbnail rbt-avatars size-lg">
                       <img
-                        src="assets/images/team/avatar-2.jpg"
+                        src="assets/images/team/avatar.jpg"
                         alt="Instructor"
                       />
                     </div>
                     <div className="tutor-content">
-                      <h5 className="title">Student name</h5>
-                      <ul className="rbt-meta rbt-meta-white mt--5">
-                        <li>
-                          <i className="feather-book" />
-                        </li>
-                        <li>
-                          <i className="feather-award" />
-                        </li>
-                      </ul>
+                      <h5 className="title">Instructor</h5>
+                    </div>
+                  </div>
+                  <div className="rbt-tutor-information-right">
+                    <div className="tutor-btn">
+                      <a
+                        className="rbt-btn btn-md hover-icon-reverse"
+                        href="create-course.html"
+                      >
+                        <span className="icon-reverse-wrapper">
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right" />
+                          </span>
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right" />
+                          </span>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -93,16 +106,15 @@ const Studentsettings = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/studentwishlist">
-                                  <i className="feather-bookmark" />
-                                  <span>Wishlist</span>
-                                </Link>
-                              </li>
-
-                              <li>
                                 <Link to="/studentquiz">
                                   <i className="feather-help-circle" />
                                   <span>My Quiz Attempts</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/studentannouncement">
+                                  <i className="feather-help-circle" />
+                                  <span>Announcements</span>
                                 </Link>
                               </li>
                               <li>
@@ -204,63 +216,87 @@ const Studentsettings = () => {
                         >
                           <div className="rbt-dashboard-content-wrapper">
                             <div className="tutor-bg-photo bg_image bg_image--23 height-245" />
-                            <Profile />
-                          </div>
-                          <div
-                            className="tab-pane fade"
-                            id="password"
-                            role="tabpanel"
-                            aria-labelledby="password-tab"
-                          >
-                            {/* Start Profile Row  */}
-                            <div className="rbt-dashboard-content-wrapper">
-                              <div className="tutor-bg-photo bg_image bg_image--23 height-245" />
-                              <Updatepassword />
+                            {/* Start Tutor Information  */}
+                            <div className="rbt-tutor-information">
+                              <div className="rbt-tutor-information-left">
+                                <div className="thumbnail rbt-avatars size-lg position-relative">
+                                  <img
+                                    src="assets/images/team/avatar-2.jpg"
+                                    alt="Instructor"
+                                  />
+                                  <div className="rbt-edit-photo-inner">
+                                    <button
+                                      className="rbt-edit-photo"
+                                      title="Upload Photo"
+                                    >
+                                      <i className="feather-camera" />
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="rbt-tutor-information-right">
+                                <div className="tutor-btn">
+                                  <a
+                                    className="rbt-btn btn-sm btn-border color-white radius-round-10"
+                                    href="#"
+                                  >
+                                    Edit Cover Photo
+                                  </a>
+                                </div>
+                              </div>
                             </div>
-                            {/* End Profile Row  */}
+                            {/* End Tutor Information  */}
                           </div>
-                          <div
-                            className="tab-pane fade"
-                            id="social"
-                            role="tabpanel"
-                            aria-labelledby="social-tab"
-                          >
-                            {/* Start Profile Row  */}
-                            <div className="rbt-dashboard-content-wrapper">
-                              <div className="tutor-bg-photo bg_image bg_image--23 height-245" />
-                              <Socialshare/>
-                            </div>
-                            {/* End Profile Row  */}
-                          </div>
+                          {/* Start Profile Row  */}
+                          <Profile />
+                          {/* End Profile Row  */}
+                        </div>
+                        <div
+                          className="tab-pane fade"
+                          id="password"
+                          role="tabpanel"
+                          aria-labelledby="password-tab"
+                        >
+                          {/* Start Profile Row  */}
+                          <Updatepassword />
+                        </div>
+                        <div
+                          className="tab-pane fade"
+                          id="social"
+                          role="tabpanel"
+                          aria-labelledby="social-tab"
+                        >
+                          <Socialshare />
+                          {/* End Profile Row  */}
                         </div>
                       </div>
                     </div>
-                    {/* End Instructor Profile  */}
                   </div>
+                  {/* End Instructor Profile  */}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* End Card Style */}
-        <div className="rbt-separator-mid">
-          <div className="container">
-            <hr className="rbt-separator m-0" />
-          </div>
-        </div>
-        <div className="rbt-progress-parent">
-          <svg
-            className="rbt-back-circle svg-inner"
-            width="100%"
-            height="100%"
-            viewBox="-1 -1 102 102"
-          >
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-          </svg>
+      </div>
+      {/* End Card Style */}
+      <div className="rbt-separator-mid">
+        <div className="container">
+          <hr className="rbt-separator m-0" />
         </div>
       </div>
-    </>
+      <div className="rbt-progress-parent">
+        <svg
+          className="rbt-back-circle svg-inner"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+      </div>
+    </div>
   );
 };
 
-export default Studentsettings;
+export default Instructorsettings;

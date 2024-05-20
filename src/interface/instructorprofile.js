@@ -1,5 +1,4 @@
 import React from "react";
-import Instructorsidebar from "./components/Instructorsidebar";
 import { Link } from "react-router-dom";
 
 const Instructorprofile = () => {
@@ -8,7 +7,7 @@ const Instructorprofile = () => {
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <title>
-        Instructor Profile - Online Courses &amp; Education Bootstrap5 Template
+        Admin Dashboard - Online Courses &amp; Education Bootstrap5 Template
       </title>
       <meta name="robots" content="noindex, follow" />
       <meta name="description" content />
@@ -22,27 +21,6 @@ const Instructorprofile = () => {
         type="image/x-icon"
         href="assets/images/favicon.png"
       />
-      {/* CSS
-	============================================ */}
-      <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
-      <link rel="stylesheet" href="assets/css/vendor/slick.css" />
-      <link rel="stylesheet" href="assets/css/vendor/slick-theme.css" />
-      <link rel="stylesheet" href="assets/css/plugins/sal.css" />
-      <link rel="stylesheet" href="assets/css/plugins/feather.css" />
-      <link rel="stylesheet" href="assets/css/plugins/fontawesome.min.css" />
-      <link rel="stylesheet" href="assets/css/plugins/euclid-circulara.css" />
-      <link rel="stylesheet" href="assets/css/plugins/swiper.css" />
-      <link rel="stylesheet" href="assets/css/plugins/magnify.css" />
-      <link rel="stylesheet" href="assets/css/plugins/odometer.css" />
-      <link rel="stylesheet" href="assets/css/plugins/animation.css" />
-      <link
-        rel="stylesheet"
-        href="assets/css/plugins/bootstrap-select.min.css"
-      />
-      <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css" />
-      <link rel="stylesheet" href="assets/css/plugins/magnigy-popup.min.css" />
-      <link rel="stylesheet" href="assets/css/plugins/plyr.css" />
-      <link rel="stylesheet" href="assets/css/style.css" />
       <a className="close_side_menu" href="javascript:void(0);" />
       <div className="rbt-page-banner-wrapper">
         {/* Start Banner BG Image  */}
@@ -67,27 +45,35 @@ const Instructorprofile = () => {
                       />
                     </div>
                     <div className="tutor-content">
-                      <h5 className="title">John Due</h5>
-                      <div className="rbt-review">
-                        <div className="rating">
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                        </div>
-                        <span className="rating-count"> (15 Reviews)</span>
-                      </div>
+                      <h5 className="Instructor username">Instructor</h5>
                     </div>
                   </div>
                   <div className="rbt-tutor-information-right">
                     <div className="tutor-btn">
                       <a
                         className="rbt-btn btn-md hover-icon-reverse"
-                        href="create-course.html"
+                        href="/createcourse"
                       >
                         <span className="icon-reverse-wrapper">
                           <span className="btn-text">Create a New Course</span>
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right" />
+                          </span>
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right" />
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="rbt-tutor-information-right">
+                    <div className="tutor-btn">
+                      <a
+                        className="rbt-btn btn-md hover-icon-reverse"
+                        href="/createevent"
+                      >
+                        <span className="icon-reverse-wrapper">
+                          <span className="btn-text">Create a New Event</span>
                           <span className="btn-icon">
                             <i className="feather-arrow-right" />
                           </span>
@@ -104,7 +90,100 @@ const Instructorprofile = () => {
               {/* End Dashboard Top  */}
               <div className="row g-5">
                 <div className="col-lg-3">
-                 <Instructorsidebar/>
+                  <div className="col-lg-3">
+                    <div className="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
+                      <div className="inner">
+                        <div className="content-item-content">
+                          <div className="rbt-default-sidebar-wrapper">
+                            <div className="section-title mb--20">
+                              <h6 className="rbt-title-style-2">
+                                Welcome, Instructor
+                              </h6>
+                            </div>
+                            <nav className="mainmenu-nav">
+                              <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                                <li>
+                                  <Link to="/instructordash">
+                                    <i className="feather-home" />
+                                    <span>Dashboard</span>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/instructorprofile">
+                                    <i className="feather-user" />
+                                    <span>My Profile</span>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/Instructorcourses">
+                                    <i className="feather-book-open" />
+                                    <span>My Courses</span>
+                                  </Link>
+                                </li>
+
+                                <li>
+                                  <Link to="/instructor-my-quiz-attempts">
+                                    <i className="feather-help-circle" />
+                                    <span> Assignments </span>
+                                  </Link>
+                                </li>
+                              </ul>
+                            </nav>
+                            <div className="section-title mt--40 mb--20">
+                              <h6 className="rbt-title-style-2">Instructor</h6>
+                            </div>
+                            <nav className="mainmenu-nav">
+                              <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                                <li>
+                                  <Link to="/instructorcourses">
+                                    <i className="feather-monitor" />
+                                    <span>My Courses</span>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/instructorannouncement">
+                                    <i className="feather-volume-2" />
+                                    <span>Announcements</span>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/instructor-quiz-attempts">
+                                    <i className="feather-message-square" />
+                                    <span>Quiz Attempts</span>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/instructorassignments">
+                                    <i className="feather-list" />
+                                    <span>Assignments</span>
+                                  </Link>
+                                </li>
+                              </ul>
+                            </nav>
+                            <div className="section-title mt--40 mb--20">
+                              <h6 className="rbt-title-style-2">User</h6>
+                            </div>
+                            <nav className="mainmenu-nav">
+                              <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                                <li>
+                                  <Link to="/instructorsettings">
+                                    <i className="feather-settings" />
+                                    <span>Settings</span>
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="/">
+                                    <i className="feather-log-out" />
+                                    <span>Logout</span>
+                                  </Link>
+                                </li>
+                              </ul>
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="col-lg-9">
                   {/* Start Instructor Profile  */}
@@ -235,13 +314,18 @@ const Instructorprofile = () => {
           <hr className="rbt-separator m-0" />
         </div>
       </div>
-  <div>
-  <div className="rbt-progress-parent">
-    <svg className="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-    </svg>
-  </div>
-</div>
+      <div>
+        <div className="rbt-progress-parent">
+          <svg
+            className="rbt-back-circle svg-inner"
+            width="100%"
+            height="100%"
+            viewBox="-1 -1 102 102"
+          >
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 };

@@ -28,29 +28,15 @@ const Studentorderhistory = () => {
                     <div className="thumbnail rbt-avatars size-lg">
                       <img
                         src="assets/images/team/avatar-2.jpg"
-                        alt="Instructor"
+                        alt="Student"
                       />
                     </div>
                     <div className="tutor-content">
-                      <h5 className="title">Student username</h5>
+                      <h5 className="Student Username">Student username</h5>
                       <ul className="rbt-meta rbt-meta-white mt--5"></ul>
                     </div>
                   </div>
-                  <div className="rbt-tutor-information-right">
-                    <div className="tutor-btn">
-                      <a className="rbt-btn btn-md hover-icon-reverse" href="#">
-                        <span className="icon-reverse-wrapper">
-                          <span className="btn-text">Become an Instructor</span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                          <span className="btn-icon">
-                            <i className="feather-arrow-right" />
-                          </span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
+                  <div className="rbt-tutor-information-right"></div>
                 </div>
               </div>
               <div className="row g-5">
@@ -85,16 +71,15 @@ const Studentorderhistory = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/studentwishlist">
-                                  <i className="feather-bookmark" />
-                                  <span>Wishlist</span>
-                                </Link>
-                              </li>
-
-                              <li>
                                 <Link to="/studentquiz">
                                   <i className="feather-help-circle" />
                                   <span>My Quiz Attempts</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/studentannouncement">
+                                  <i className="feather-help-circle" />
+                                  <span>Announcements</span>
                                 </Link>
                               </li>
                               <li>

@@ -7,17 +7,14 @@ const Createevent = () => {
     <div>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <title>
-        Create Event
-      </title>
+      <title>Create Event</title>
       <meta name="robots" content="noindex, follow" />
       <meta name="description" content />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
-      
-    
+
       <a className="close_side_menu" href="javascript:void(0);" />
       <main className="rbt-main-wrapper">
         <div className="rbt-create-course-area bg-color-white rbt-section-gap">
@@ -48,8 +45,8 @@ const Createevent = () => {
                         <div className="accordion-body card-body">
                           {/* Start Course Field Wrapper  */}
                           <div className="rbt-course-field-wrapper rbt-default-form">
-                            <div className="course-field mb--15">
-                              <label htmlFor="field-1">Event Title</label>
+                            <div className="Event Content mb--15">
+                              <label htmlFor="Event Title">Event Title</label>
                               <input
                                 id="field-1"
                                 type="text"
@@ -61,8 +58,8 @@ const Createevent = () => {
                               </small>
                             </div>
 
-                            <div className="course-field mb--15">
-                              <label htmlFor="aboutCourse">Event content</label>
+                            <div className="Event Content mb--15">
+                              <label htmlFor="Event content">Event content</label>
                               <textarea
                                 id="aboutCourse"
                                 rows={10}
@@ -75,7 +72,7 @@ const Createevent = () => {
                               </small>
                             </div>
                             <div className="course-field mb--15 edu-bg-gray">
-                              <h6>Course Settings</h6>
+                              <h6>Event Settings</h6>
                               <div className="rbt-course-settings-content">
                                 <div className="row g-5">
                                   <div className="col-lg-8">
@@ -105,7 +102,7 @@ const Createevent = () => {
                                             this course. Set 0 for no limits.
                                           </small>
                                         </div>
-                                        <div className="course-field mb--20">
+                                        <div className="Difficulty">
                                           <label htmlFor="field-4">
                                             Difficulty Level
                                           </label>
@@ -134,7 +131,7 @@ const Createevent = () => {
                             </div>
                             <div className="course-field mb--20">
                               <h6>Course Thumbnail</h6>
-                              <div className="rbt-create-course-thumbnail upload-area">
+                              <div className="Course Thumbnail">
                                 <div className="upload-area">
                                   <div
                                     className="brows-file-wrapper"
@@ -177,7 +174,7 @@ const Createevent = () => {
                         </div>
                       </div>
                     </div>
-                  
+
                     <div className="accordion-item card rbt-course-field-wrapper">
                       <h2 className="accordion-header card-header" id="accSix">
                         <button
@@ -216,12 +213,11 @@ const Createevent = () => {
                               name="startTime"
                             />
                           </div>
-                       
 
                           <div className="col-lg-6"></div>
                           <div className="col-lg-6">
                             <div className="course-field mb--15">
-                              <label htmlFor="whatLearn">Requirements</label>
+                              <label htmlFor="Requirements">Requirements</label>
                               <textarea
                                 id="whatLearn"
                                 rows={5}
@@ -234,16 +230,9 @@ const Createevent = () => {
                               </small>
                             </div>
                           </div>
-                        
-                         
-                      
-                       
-                    
-                      
                         </div>
                       </div>
                     </div>
-                   
                   </div>
                 </div>
                 <div className="mt--10 row g-5">
@@ -265,15 +254,9 @@ const Createevent = () => {
                   </div>
                 </div>
               </div>
-             
             </div>
           </div>
         </div>
-     
-        
-
-     
-      
       </main>
     </div>
   );

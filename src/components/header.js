@@ -31,7 +31,7 @@ const Header = () => {
               <div className="header-left rbt-header-content">
                 <div className="header-info">
                   <div className="logo">
-                    <a href="index.html">
+                    <a href="Landing">
                       <img
                         src="assets/images/logo/logo.png"
                         alt="Education Logo Images"
@@ -64,11 +64,6 @@ const Header = () => {
                     <li className="with-megamenu has-menu-child-item position-static">
                       <Link to="/Contact">
                         Contact <i className="feather-chevron-down" />
-                      </Link>
-                    </li>
-                    <li className="with-megamenu has-menu-child-item position-static">
-                      <Link to="/About">
-                        About <i className="feather-chevron-down" />
                       </Link>
                     </li>
                   </ul>

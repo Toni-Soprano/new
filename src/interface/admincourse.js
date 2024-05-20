@@ -165,12 +165,7 @@ const AdminCourse = () => {
                       </div>
                       <nav className="mainmenu-nav">
                         <ul className="dashboard-mainmenu rbt-default-sidebar-list">
-                          <li>
-                            <Link to="/Adminsettings">
-                              <i className="feather-settings" />
-                              <span>Settings</span>
-                            </Link>
-                          </li>
+                       
                           <li>
                             <Link to="/">
                               <i className="feather-log-out" />
@@ -201,7 +196,7 @@ const AdminCourse = () => {
                         <table className="rbt-table table table-borderless">
                           <thead>
                             <tr>
-                              <th>Course Name</th>
+                              <th className="Course title">Course Name</th>
                               <th>Title</th>{" "}
                               {/* Updated from "Enrolled" to "Title" */}
                               <th>Status</th>

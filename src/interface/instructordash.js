@@ -46,27 +46,35 @@ const Instructordash = () => {
                       />
                     </div>
                     <div className="tutor-content">
-                      <h5 className="title">John Due</h5>
-                      <div className="rbt-review">
-                        <div className="rating">
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                          <i className="fas fa-star" />
-                        </div>
-                        <span className="rating-count"> (15 Reviews)</span>
-                      </div>
+                      <h5 className="Instructor username">Instructor</h5>
                     </div>
                   </div>
                   <div className="rbt-tutor-information-right">
                     <div className="tutor-btn">
                       <a
                         className="rbt-btn btn-md hover-icon-reverse"
-                        href="create-course.html"
+                        href="/createcourse"
                       >
                         <span className="icon-reverse-wrapper">
                           <span className="btn-text">Create a New Course</span>
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right" />
+                          </span>
+                          <span className="btn-icon">
+                            <i className="feather-arrow-right" />
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="rbt-tutor-information-right">
+                    <div className="tutor-btn">
+                      <a
+                        className="rbt-btn btn-md hover-icon-reverse"
+                        href="/createevent"
+                      >
+                        <span className="icon-reverse-wrapper">
+                          <span className="btn-text">Create a New Event</span>
                           <span className="btn-icon">
                             <i className="feather-arrow-right" />
                           </span>
@@ -82,7 +90,100 @@ const Instructordash = () => {
               </div>
               {/* End Dashboard Top  */}
               <div className="row g-5">
-                <Instructorsidebar />
+                <div className="col-lg-3">
+                  <div className="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
+                    <div className="inner">
+                      <div className="content-item-content">
+                        <div className="rbt-default-sidebar-wrapper">
+                          <div className="section-title mb--20">
+                            <h6 className="rbt-title-style-2">
+                              Welcome, Instructor
+                            </h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/instructordash">
+                                  <i className="feather-home" />
+                                  <span>Dashboard</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/instructorprofile">
+                                  <i className="feather-user" />
+                                  <span>My Profile</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/Instructorcourses">
+                                  <i className="feather-book-open" />
+                                  <span>My Courses</span>
+                                </Link>
+                              </li>
+
+                              <li>
+                                <Link to="/instructor-my-quiz-attempts">
+                                  <i className="feather-help-circle" />
+                                  <span> Assignments </span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                          <div className="section-title mt--40 mb--20">
+                            <h6 className="rbt-title-style-2">Instructor</h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/instructorcourses">
+                                  <i className="feather-monitor" />
+                                  <span>My Courses</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/instructorannouncement">
+                                  <i className="feather-volume-2" />
+                                  <span>Announcements</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/instructor-quiz-attempts">
+                                  <i className="feather-message-square" />
+                                  <span>Quiz Attempts</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/instructorassignments">
+                                  <i className="feather-list" />
+                                  <span>Assignments</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                          <div className="section-title mt--40 mb--20">
+                            <h6 className="rbt-title-style-2">User</h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/instructorsettings">
+                                  <i className="feather-settings" />
+                                  <span>Settings</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/">
+                                  <i className="feather-log-out" />
+                                  <span>Logout</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="col-lg-9">
                   <div className="rbt-dashboard-content bg-color-white rbt-shadow-box mb--60">
                     <div className="content">

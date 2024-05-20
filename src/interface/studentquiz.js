@@ -113,16 +113,15 @@ const Studentquiz = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/studentwishlist">
-                                  <i className="feather-bookmark" />
-                                  <span>Wishlist</span>
-                                </Link>
-                              </li>
-
-                              <li>
                                 <Link to="/studentquiz">
                                   <i className="feather-help-circle" />
                                   <span>My Quiz Attempts</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/studentannouncement">
+                                  <i className="feather-help-circle" />
+                                  <span>Announcements</span>
                                 </Link>
                               </li>
                               <li>

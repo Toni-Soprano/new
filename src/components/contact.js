@@ -113,9 +113,7 @@ const Contact = () => {
                     EDUCATION FOR EVERYONE
                   </span>
                 </div>
-                <h3 className="title">
-                  Get a Free Course You Can Contact With Me
-                </h3>
+                
                 <form
                   id="contact-form"
                   method="POST"
@@ -123,12 +121,12 @@ const Contact = () => {
                   className="rainbow-dynamic-form max-width-auto"
                 >
                   <div className="form-group">
-                    <input name="contact-name" id="contact-name" type="text" />
+                    <input name="Name" id="contact-name" type="text" />
                     <label>Name</label>
                     <span className="focus-border" />
                   </div>
                   <div className="form-group">
-                    <input name="contact-phone" type="email" />
+                    <input name="Email" type="email" />
                     <label>Email</label>
                     <span className="focus-border" />
                   </div>
@@ -154,7 +152,6 @@ const Contact = () => {
                       className="rbt-btn btn-md btn-gradient hover-icon-reverse w-100"
                     >
                       <span className="icon-reverse-wrapper">
-                        <span className="btn-text">GET IT NOW</span>
                         <span className="btn-icon">
                           <i className="feather-arrow-right" />
                         </span>

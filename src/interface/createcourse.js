@@ -154,7 +154,6 @@ const Createcourse = () => {
                                             aria-controls="content"
                                             aria-selected="false"
                                           >
-                                            <span>Content Drip</span>
                                           </a>
                                         </li>
                                       </ul>
@@ -209,111 +208,8 @@ const Createcourse = () => {
                                           </small>
                                         </div>
                                         
-                                     
                                       </div>
-                                      <div
-                                        className="tab-pane fade advance-tab-content-1"
-                                        id="content"
-                                        role="tabpanel"
-                                        aria-labelledby="content-tab"
-                                      >
-                                        <div className="rbt-content-drip-content">
-                                          <div className="course-field pb--20">
-                                            <p className="rbt-checkbox-wrapper mb--5">
-                                              <input
-                                                id="rbt-checkbox-1"
-                                                name="rbt-checkbox-1"
-                                                type="checkbox"
-                                                defaultValue="yes"
-                                              />
-                                              <label htmlFor="rbt-checkbox-1">
-                                                Enable
-                                              </label>
-                                            </p>
-                                            <small>
-                                              <i className="feather-info" />
-                                              Enable / Disable content drip
-                                            </small>
-                                          </div>
-                                          <hr className="rbt-separator m-0" />
-                                          <div className="rbt-course-drip-option pt--20">
-                                            <h6 className="mb--10">
-                                              Content Drip Type
-                                            </h6>
-                                            <p className="mb--10 b3">
-                                              You can schedule your course
-                                              content using the above content
-                                              drip options.
-                                            </p>
-                                            <div className="course-drop-option">
-                                              <div className="rbt-form-check">
-                                                <input
-                                                  className="form-check-input"
-                                                  type="radio"
-                                                  name="rbt-radio"
-                                                  id="rbt-radio-1"
-                                                />
-                                                <label
-                                                  className="form-check-label"
-                                                  htmlFor="rbt-radio-1"
-                                                >
-                                                  {" "}
-                                                  Schedule course contents by
-                                                  date
-                                                </label>
-                                              </div>
-                                              <div className="rbt-form-check">
-                                                <input
-                                                  className="form-check-input"
-                                                  type="radio"
-                                                  name="rbt-radio"
-                                                  id="rbt-radio-2"
-                                                />
-                                                <label
-                                                  className="form-check-label"
-                                                  htmlFor="rbt-radio-2"
-                                                >
-                                                  {" "}
-                                                  Content available after X days
-                                                  from enrollment
-                                                </label>
-                                              </div>
-                                              <div className="rbt-form-check">
-                                                <input
-                                                  className="form-check-input"
-                                                  type="radio"
-                                                  name="rbt-radio"
-                                                  id="rbt-radio-3"
-                                                />
-                                                <label
-                                                  className="form-check-label"
-                                                  htmlFor="rbt-radio-3"
-                                                >
-                                                  {" "}
-                                                  Course content available
-                                                  sequentially
-                                                </label>
-                                              </div>
-                                              <div className="rbt-form-check">
-                                                <input
-                                                  className="form-check-input"
-                                                  type="radio"
-                                                  name="rbt-radio"
-                                                  id="rbt-radio-4"
-                                                />
-                                                <label
-                                                  className="form-check-label"
-                                                  htmlFor="rbt-radio-4"
-                                                >
-                                                  {" "}
-                                                  Course content unlocked after
-                                                  finishing prerequisites
-                                                </label>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
+                                    
                                     </div>
                                   </div>
                                 </div>
@@ -389,21 +285,7 @@ const Createcourse = () => {
                                             Fee.
                                           </small>
                                         </div>
-                                        <div className="course-field mb--15">
-                                          <label htmlFor="discountedPrice-1">
-                                            Discounted Price ($)
-                                          </label>
-                                          <input
-                                            id="discountedPrice-1"
-                                            type="number"
-                                            placeholder="$ Discounted Price"
-                                          />
-                                          <small className="d-block mt_dec--5">
-                                            <i className="feather-info" /> The
-                                            Course Price Includes Your Author
-                                            Fee.
-                                          </small>
-                                        </div>
+                                        
                                       </div>
                                       <div
                                         className="tab-pane fade advance-tab-content-1"
@@ -1090,24 +972,7 @@ const Createcourse = () => {
             <hr className="rbt-separator m-0" />
           </div>
         </div>
-        <div className="footer-style-2 ptb--60 bg-color-white">
-          <div className="container-fluid">
-            <div className="row align-items-center justify-content-between">
-              <div className="col-lg-12">
-                <div className="inner text-center">
-                  <div className="logo">
-                    <a href="index.html">
-                      <img
-                        src="assets/images/logo/logo.png"
-                        alt="Logo images"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </main>
       <div className="rbt-progress-parent">
         <svg

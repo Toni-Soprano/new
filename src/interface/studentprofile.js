@@ -30,28 +30,23 @@ const Studentprofile = () => {
     <div>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <title>Student Profile - Learnify</title>
+      <title>Student Reviews - Online Courses &amp;</title>
       <meta name="robots" content="noindex, follow" />
-      <meta name="description" content="Student profile page" />
+      <meta name="description" content="" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
-      <link
-        rel="shortcut icon"
-        type="image/x-icon"
-        href="assets/images/favicon.png"
-      />
-
+      <a className="close_side_menu" href="javascript:void(0);" />
       <div className="rbt-page-banner-wrapper">
         <div className="rbt-banner-image" />
       </div>
-
       <div className="rbt-dashboard-area rbt-section-overlayping-top rbt-section-gapBottom">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="rbt-dashboard-content-wrapper">
+                <div className="tutor-bg-photo bg_image bg_image--23 height-350" />
                 <div className="rbt-tutor-information">
                   <div className="rbt-tutor-information-left">
                     <div className="thumbnail rbt-avatars size-lg">
@@ -60,11 +55,14 @@ const Studentprofile = () => {
                         alt="Student"
                       />
                     </div>
-                    
+                    <div className="tutor-content">
+                      <h5 className="Student Username">Student username</h5>
+                      <ul className="rbt-meta rbt-meta-white mt--5"></ul>
+                    </div>
                   </div>
+                  <div className="rbt-tutor-information-right"></div>
                 </div>
               </div>
-
               <div className="row g-5">
                 <div className="col-lg-3">
                   <div className="rbt-default-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
@@ -97,15 +95,15 @@ const Studentprofile = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/studentwishlist">
-                                  <i className="feather-bookmark" />
-                                  <span>Wishlist</span>
-                                </Link>
-                              </li>
-                              <li>
                                 <Link to="/studentquiz">
                                   <i className="feather-help-circle" />
                                   <span>My Quiz Attempts</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/studentannouncement">
+                                  <i className="feather-help-circle" />
+                                  <span>Announcements</span>
                                 </Link>
                               </li>
                               <li>

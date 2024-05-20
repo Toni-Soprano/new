@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Instructorsidebar = () => {
   return (
@@ -13,16 +14,16 @@ const Instructorsidebar = () => {
               <nav className="mainmenu-nav">
                 <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                   <li>
-                    <a href="instructor-dashboard.html">
+                    <Link to="/instructor-dashboard">
                       <i className="feather-home" />
                       <span>Dashboard</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="instructor-profile.html">
+                    <Link to="/instructor-profile">
                       <i className="feather-user" />
                       <span>My Profile</span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -32,28 +33,28 @@ const Instructorsidebar = () => {
               <nav className="mainmenu-nav">
                 <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                   <li>
-                    <a href="instructor-course.html">
+                    <Link to="/instructor-course">
                       <i className="feather-monitor" />
                       <span>My Courses</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="instructor-announcements.html">
+                    <Link to="/instructor-announcements">
                       <i className="feather-volume-2" />
                       <span>Announcements</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="instructor-quiz-attempts.html">
+                    <Link to="/instructorq">
                       <i className="feather-message-square" />
                       <span>Quiz Attempts</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="instructor-assignments.html">
+                    <Link to="/instructorassignments">
                       <i className="feather-list" />
                       <span>Assignments</span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -63,16 +64,16 @@ const Instructorsidebar = () => {
               <nav className="mainmenu-nav">
                 <ul className="dashboard-mainmenu rbt-default-sidebar-list">
                   <li>
-                    <a href="instructor-settings.html">
+                    <Link to="/instructorsettings">
                       <i className="feather-settings" />
                       <span>Settings</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index.html">
+                    <Link to="/forumlogin">
                       <i className="feather-log-out" />
                       <span>Logout</span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>

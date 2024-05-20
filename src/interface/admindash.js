@@ -91,6 +91,12 @@ const Admindash = () => {
                                 </Link>
                               </li>
                               <li>
+                                <Link to="/Admininstructors">
+                                  <i className="feather-volume-2" />
+                                  <span>Instructor Validation</span>
+                                </Link>
+                              </li>
+                              <li>
                                 <Link to="/Aminannouncement">
                                   <i className="feather-message-square" />
                                   <span>Announcements</span>

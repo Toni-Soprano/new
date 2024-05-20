@@ -31,11 +31,8 @@ const Adminorderhistory = () => {
                       />
                     </div>
                     <div className="tutor-content">
-                      <h5 className="title">Admin</h5>
-                      <ul className="rbt-meta rbt-meta-white mt--5">
-                      
-                        
-                      </ul>
+                      <h5 className="title">ADMIN</h5>
+                      <ul className="rbt-meta rbt-meta-white mt--5"></ul>
                     </div>
                   </div>
                   <div className="rbt-tutor-information-right">
@@ -62,67 +59,63 @@ const Adminorderhistory = () => {
                       <div className="content-item-content">
                         <div className="rbt-default-sidebar-wrapper">
                           <div className="section-title mb--20">
-                            <h6 className="rbt-title-style-2">
-                              Welcome
-                            </h6>
+                            <h6 className="rbt-title-style-2">Welcome</h6>
                           </div>
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
-                              {/* Sidebar menu items */}
-                          <li>
-                            <Link to="/Admindash">
-                              <i className="feather-home" />
-                              <span>Dashboard</span>
-                            </Link>
-                          </li>
-                        </ul>
-                      </nav>
-                      <nav className="mainmenu-nav">
-                        <ul className="dashboard-mainmenu rbt-default-sidebar-list">
-                          <li>
-                            <Link to="/Admincourse">
-                              <i className="feather-monitor" />
-                              <span>Courses Validation</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/Adminevents">
-                              <i className="feather-volume-2" />
-                              <span>Events Validation</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/Aminannouncement">
-                              <i className="feather-message-square" />
-                              <span>Announcements</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/Adminorderhistory">
-                              <i className="feather-list" />
-                              <span>Order History</span>
-                            </Link>
-                          </li>
-                        </ul>
-                      </nav>
-                      <div className="section-title mt--40 mb--20">
-                        <h6 className="rbt-title-style-2">User</h6>
-                      </div>
-                      <nav className="mainmenu-nav">
-                        <ul className="dashboard-mainmenu rbt-default-sidebar-list">
-                          <li>
-                            <Link to="/Adminsettings">
-                              <i className="feather-settings" />
-                              <span>Settings</span>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/">
-                              <i className="feather-log-out" />
-                              <span>Logout</span>
-                            </Link>
-                          </li>
-                              {/* Sidebar menu items */}
+                              <li>
+                                <Link to="/Admindash">
+                                  <i className="feather-home" />
+                                  <span>Dashboard</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/Admincourse">
+                                  <i className="feather-monitor" />
+                                  <span>Courses Validation</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/Adminevents">
+                                  <i className="feather-volume-2" />
+                                  <span>Events Validation</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/Admininstructors">
+                                  <i className="feather-volume-2" />
+                                  <span>Instructor Validation</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/Aminannouncement">
+                                  <i className="feather-message-square" />
+                                  <span>Announcements</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/Adminorderhistory">
+                                  <i className="feather-list" />
+                                  <span>Order History</span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </nav>
+                          <div className="section-title mt--40 mb--20">
+                            <h6 className="rbt-title-style-2">User</h6>
+                          </div>
+                          <nav className="mainmenu-nav">
+                            <ul className="dashboard-mainmenu rbt-default-sidebar-list">
+                              <li>
+                                <Link to="/">
+                                  <i className="feather-log-out" />
+                                  <span>Logout</span>
+                                </Link>
+                              </li>
                             </ul>
                           </nav>
                         </div>

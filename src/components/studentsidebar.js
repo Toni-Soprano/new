@@ -38,7 +38,7 @@ const Studentsidebar = () => {
                 <li>
                   <a href="student-reviews.html">
                     <i className="feather-star" />
-                    <span>Reviews</span>
+                    <span>Announcements</span>
                   </a>
                 </li>
                 <li>
