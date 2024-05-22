@@ -1,13 +1,8 @@
 import React from "react";
-import Instructorsidebar from "../components/instructorsidebar.js";
-import Updatepassword from "../components/updatepassword.js";
-import Profile from "../components/profile.js";
-import Socialshare from "../components/Socialshare.js";
+import Instructorsidebar from "../../components/instructorsidebar";
 import { Link } from "react-router-dom";
 
-
-
-const Instructorsettings = () => {
+const Instructordash = () => {
   return (
     <div>
       <meta charSet="utf-8" />
@@ -101,7 +96,9 @@ const Instructorsettings = () => {
                       <div className="content-item-content">
                         <div className="rbt-default-sidebar-wrapper">
                           <div className="section-title mb--20">
-                            <h6 className="rbt-title-style-2">Welcome,</h6>
+                            <h6 className="rbt-title-style-2">
+                              Welcome, Instructor
+                            </h6>
                           </div>
                           <nav className="mainmenu-nav">
                             <ul className="dashboard-mainmenu rbt-default-sidebar-list">
@@ -186,130 +183,137 @@ const Instructorsettings = () => {
                       </div>
                     </div>
                   </div>
-                </div>{" "}
+                </div>
                 <div className="col-lg-9">
-                  {/* Start Instructor Profile  */}
-                  <div className="rbt-dashboard-content bg-color-white rbt-shadow-box">
+                  <div className="rbt-dashboard-content bg-color-white rbt-shadow-box mb--60">
                     <div className="content">
-                      <div className="section-title">
-                        <h4 className="rbt-title-style-3">Settings</h4>
-                      </div>
-                      <div className="advance-tab-button mb--30">
-                        <ul
-                          className="nav nav-tabs tab-button-style-2 justify-content-start"
-                          id="settinsTab-4"
-                          role="tablist"
-                        >
-                          <li role="presentation">
-                            <a
-                              href="#"
-                              className="tab-button active"
-                              id="profile-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#profile"
-                              role="tab"
-                              aria-controls="profile"
-                              aria-selected="true"
-                            >
-                              <span className="title">Profile</span>
-                            </a>
-                          </li>
-                          <li role="presentation">
-                            <a
-                              href="#"
-                              className="tab-button"
-                              id="password-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#password"
-                              role="tab"
-                              aria-controls="password"
-                              aria-selected="false"
-                            >
-                              <span className="title">Password</span>
-                            </a>
-                          </li>
-                          <li role="presentation">
-                            <a
-                              href="#"
-                              className="tab-button"
-                              id="social-tab"
-                              data-bs-toggle="tab"
-                              data-bs-target="#social"
-                              role="tab"
-                              aria-controls="social"
-                              aria-selected="false"
-                            >
-                              <span className="title">Social Share</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="tab-content">
-                        <div
-                          className="tab-pane fade active show"
-                          id="profile"
-                          role="tabpanel"
-                          aria-labelledby="profile-tab"
-                        >
-                          <div className="rbt-dashboard-content-wrapper">
-                            <div className="tutor-bg-photo bg_image bg_image--23 height-245" />
-                            {/* Start Tutor Information  */}
-                            <div className="rbt-tutor-information">
-                              <div className="rbt-tutor-information-left">
-                                <div className="thumbnail rbt-avatars size-lg position-relative">
-                                  <img
-                                    src="assets/images/team/avatar-2.jpg"
-                                    alt="Instructor"
-                                  />
-                                  <div className="rbt-edit-photo-inner">
-                                    <button
-                                      className="rbt-edit-photo"
-                                      title="Upload Photo"
-                                    >
-                                      <i className="feather-camera" />
-                                    </button>
-                                  </div>
-                                </div>
+                      <div className="row g-5">
+                        {/* Start Single Card  */}
+                        <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+                          <div className="rbt-counterup variation-01 rbt-hover-03 rbt-border-dashed bg-primary-opacity">
+                            <div className="inner">
+                              <div className="rbt-round-icon bg-primary-opacity">
+                                <i className="feather-book-open" />
                               </div>
-                              <div className="rbt-tutor-information-right">
-                                <div className="tutor-btn">
-                                  <a
-                                    className="rbt-btn btn-sm btn-border color-white radius-round-10"
-                                    href="#"
-                                  >
-                                    Edit Cover Photo
-                                  </a>
-                                </div>
+                              <div className="content">
+                                <h3 className="counter without-icon color-primary">
+                                  <span className="odometer" data-count={30}>
+                                    00
+                                  </span>
+                                </h3>
+                                <span className="rbt-title-style-2 d-block">
+                                  Total Courses
+                                </span>
                               </div>
                             </div>
-                            {/* End Tutor Information  */}
                           </div>
-                          {/* Start Profile Row  */}
-                          <Profile />
-                          {/* End Profile Row  */}
                         </div>
-                        <div
-                          className="tab-pane fade"
-                          id="password"
-                          role="tabpanel"
-                          aria-labelledby="password-tab"
-                        >
-                          {/* Start Profile Row  */}
-                          <Updatepassword />
+                        {/* End Single Card  */}
+                        {/* Start Single Card  */}
+                        <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+                          <div className="rbt-counterup variation-01 rbt-hover-03 rbt-border-dashed bg-secondary-opacity">
+                            <div className="inner">
+                              <div className="rbt-round-icon bg-secondary-opacity">
+                                <i className="feather-monitor" />
+                              </div>
+                              <div className="content">
+                                <h3 className="counter without-icon color-secondary">
+                                  <span className="odometer" data-count={10}>
+                                    00
+                                  </span>
+                                </h3>
+                                <span className="rbt-title-style-2 d-block">
+                                  Total Instuctors
+                                </span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div
-                          className="tab-pane fade"
-                          id="social"
-                          role="tabpanel"
-                          aria-labelledby="social-tab"
-                        >
-                          <Socialshare />
-                          {/* End Profile Row  */}
+                        {/* End Single Card  */}
+                        {/* Start Single Card  */}
+                        <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+                          <div className="rbt-counterup variation-01 rbt-hover-03 rbt-border-dashed bg-pink-opacity">
+                            <div className="inner">
+                              <div className="rbt-round-icon bg-pink-opacity">
+                                <i className="feather-users" />
+                              </div>
+                              <div className="content">
+                                <h3 className="counter without-icon color-pink">
+                                  <span className="odometer" data-count={160}>
+                                    00
+                                  </span>
+                                </h3>
+                                <span className="rbt-title-style-2 d-block">
+                                  Total Students
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {/* End Single Card  */}
+                        {/* Start Single Card  */}
+                        <div className="col-lg-4 col-md-4 col-sm-6 col-12">
+                          <div className="rbt-counterup variation-01 rbt-hover-03 rbt-border-dashed bg-warning-opacity">
+                            <div className="inner">
+                              <div className="rbt-round-icon bg-warning-opacity">
+                                <i className="feather-dollar-sign" />
+                              </div>
+                              <div className="content">
+                                <h3 className="counter color-warning">
+                                  <span className="odometer" data-count={25000}>
+                                    00
+                                  </span>
+                                </h3>
+                                <span className="rbt-title-style-2 d-block">
+                                  Total Earnings
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {/* End Single Card  */}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="rbt-dashboard-content bg-color-white rbt-shadow-box mb--60">
+                    <div className="content">
+                      <div className="row">
+                        <div className="col-lg-12">
+                          <div className="section-title">
+                            <h4 className="rbt-title-style-3">My Courses</h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="row gy-5">
+                        <div className="col-lg-12">
+                          <div className="rbt-dashboard-table table-responsive">
+                            <table className="rbt-table table table-borderless">
+                              <thead>
+                                <tr>
+                                  <th>Course Name</th>
+                                  <th>Enrolled</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>
+                                    <a href="#">Course Name</a>
+                                  </th>
+                                  <td>Number</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div className="load-more-btn text-center">
+                            <a className="rbt-btn-link" href="#">
+                              Browse All Course
+                              <i className="feather-arrow-right" />
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  {/* End Instructor Profile  */}
                 </div>
               </div>
             </div>
@@ -336,4 +340,4 @@ const Instructorsettings = () => {
   );
 };
 
-export default Instructorsettings;
+export default Instructordash;

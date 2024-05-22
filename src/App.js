@@ -1,27 +1,30 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/header.js";
-import Footer from "./components/footer.js";
-import Courses from "./interface/courses.js";
+
+
+import Forumlogin from "./Auth/forumlogin.js";
+import Forumregister from "./Auth/forumregister.js";
+
+import Courses from "./interface/course/courses.js";
 import Events from "./interface/events.js";
-import Forumlogin from "./components/forumlogin.js";
-import Forumregister from "./components/forumregister.js";
-import Studentdash from "./interface/studentdash.js";
-import Studentprofile from "./interface/studentprofile.js";
-import Studentcourse from "./interface/studentcourse.js";
-import Studentsettings from "./interface/studentsettings.js";
-import Studentquiz from "./interface/studentquiz.js";
-import Instructordash from "./interface/instructordash.js";
-import Instructorcourses from "./interface/instructorcourses.js";
-import Instructorsettings from "./interface/instructorsettings.js";
+
+import Studentdash from "./interface/student/studentdash.js";
+import Studentprofile from "./interface/student/studentprofile.js";
+import Studentcourse from "./interface/student/studentcourse.js";
+import Studentsettings from "./interface/student/studentsettings.js";
+
+import Studentquiz from "./interface/student/studentquiz.js";
+import Instructordash from "./interface/instructor/instructordash.js";
+import Instructorcourses from "./interface/instructor/instructorcourses.js";
+import Instructorsettings from "./interface/instructor/instructorsettings.js";
 import Checkout from "./components/checkout.js";
 import Landing from "./interface/landing.js";
-import Admindash from "./interface/admindash.js";
+import Admindash from "./interface/admin/admindash.js";
 import Adminsidebar from "./components/adminsidebar.js";
-import Createcourse from "./interface/createcourse.js";
+import Createcourse from "./interface/course/createcourse.js";
 import AddLesson from "./components/addlesson.js";
 import Addquizform from "./components/addquizform.js";
-import Coursedetails from "./interface/coursedetails.js";
+import Coursedetails from "./interface/course/coursedetails.js";
 import Updatepassword from "./components/updatepassword.js";
 import Profile from "./components/profile.js";
 import Lessona from "./components/lessonassignment.js";
@@ -32,28 +35,28 @@ import Lesson from "./components/lesson.js";
 import Lessonintro from "./components/lessonintro.js";
 import Studentsidebar from "./components/studentsidebar.js";
 import Cart from "./components/cart.js";
-import Card from "./components/card.js";
+import Card from "./components/ss.js";
 import Eventdetails from "./interface/eventdetails.js";
 import AddAssignment from "./components/addassignment.js";
-import Createevent from "./interface/createevent.js";
-import AdminCourse from "./interface/admincourse.js";
+import Createevent from "./interface/course/createevent.js";
+import AdminCourse from "./interface/admin/admincourse.js";
 import PasswordRecovery from "./components/passwordrecovery.js";
-import Adminorderhistory from "./interface/adminorderhistory.js";
+import Adminorderhistory from "./interface/admin/adminorderhistory.js";
 import Event from "./components/event.js";
-import Adminannouncement from "./interface/adminannouncement.js";
+import Adminannouncement from "./interface/admin/adminannouncement.js";
 import VideoPreview from "./components/videopreview.js";
 import Contact from "./components/contact.js";
 import Instcourse from "./components/instcourse.js";
-import Admininstructors from "./interface/admininstructors.js";
-import Instructorannouncement from "./interface/instructorannouncement.js";
-import instructorassignments from "./interface/instructorassignments.js";
-import Studentannouncements from "./interface/studentannouncements.js";
+import Admininstructors from "./interface/admin/admininstructors.js";
+import Instructorannouncement from "./interface/instructor/instructorannouncement.js";
+import instructorassignments from "./interface/instructor/instructorassignments.js";
+import Studentannouncements from "./interface/student/studentannouncements.js";
 
-
+import AdminLogin from "./Auth/adminlogin.js";
 function App() {
   return (
     <Router>
-      <Header />
+      
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/instcourse" element={<Instcourse />} />
@@ -63,10 +66,10 @@ function App() {
         <Route path="/forumregister" element={<Forumregister />} />
         <Route path="/instructordash" element={<Instructordash />} />
         <Route path="/instructorsettings" element={<Instructorsettings />} />
-
+        <Route path="/adminlogin" element={<AdminLogin/>}/>
         <Route path="/videopreview" element={<VideoPreview />} />
         <Route path="/studentdash" element={<Studentdash />} />
-        <Route path="/studentprofile" element={<Studentprofile />} />
+        
         <Route path="/studentcourse" element={<Studentcourse />} />
         <Route path="/studentsettings" element={<Studentsettings />} />
         <Route path="/studentquiz" element={<Studentquiz />} />
@@ -78,7 +81,8 @@ function App() {
         <Route path="/createcourse" element={<Createcourse />} />
         <Route path="/addlesson" element={<AddLesson />} />
         <Route path="/addquizform" element={<Addquizform />} />
-        <Route path="/coursedetails" element={<Coursedetails />} />
+        <Route path="/coursedetails/:id" element={<Coursedetails />} />
+
         <Route path="/updatepassword" element={<Updatepassword />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/lessona" element={<Lessona />} />
@@ -105,7 +109,7 @@ function App() {
           element={<Instructorannouncement />}
         />
       </Routes>
-      <Footer />
+     
     </Router>
   );
 }

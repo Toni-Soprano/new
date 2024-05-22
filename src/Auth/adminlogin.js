@@ -1,40 +1,63 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const Forumlogin = () => {
-  const [formData, setFormData] = useState({
-    usernameOrEmail: "",
-    password: "",
-  });
+const AdminLogin = () => {
+  const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
   };
 
-  const loginUser = async () => {
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const loginAdmin = async () => {
     setLoading(true);
     setError(null);
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/login",
-        formData
+        "http://localhost:8080/api/admins/login",
+        {
+          username,
+          password,
+        }
       );
-      console.log(response.data);
+      console.log("Admin login successful:", response.data);
+
+      // Save admin information to localStorage or session storage
+      // For example:
+      sessionStorage.setItem("admin", JSON.stringify(response.data.admin));
+
+      Swal.fire({
+        title: "Welcome, Admin!",
+        text: "Admin logged in.",
+        icon: "success",
+      });
+
+      // Redirect to admin dashboard or admin-specific page
+      navigate("/admindash");
     } catch (error) {
-      setError("Invalid username/email or password.");
+      console.error("There was an error logging in as admin:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Network Error",
+        text: "Unable to connect to the server. Please try again later.",
+      });
+      setError("Invalid username or password.");
     }
     setLoading(false);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    loginUser();
+    loginAdmin();
   };
 
   return (
@@ -43,47 +66,28 @@ const Forumlogin = () => {
         <div className="row gy-5 row--30">
           <div className="col-lg-6" style={{ width: "50%", marginLeft: "30%" }}>
             <div className="rbt-contact-form contact-form-style-1 max-width-auto">
-              <h3 className="title">Login</h3>
+              <h3 className="title">Admin Login</h3>
               {error && <div className="alert alert-danger">{error}</div>}
               <form className="max-width-auto" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <input
-                    name="usernameOrEmail"
+                    name="username"
                     type="text"
-                    value={formData.usernameOrEmail}
-                    onChange={handleInputChange}
+                    value={username}
+                    onChange={handleUsernameChange}
+                    placeholder="Username"
                   />
-                  <label>Username or email *</label>
                   <span className="focus-border" />
                 </div>
                 <div className="form-group">
                   <input
                     name="password"
                     type="password"
-                    value={formData.password}
-                    onChange={handleInputChange}
+                    value={password}
+                    onChange={handlePasswordChange}
+                    placeholder="Password"
                   />
-                  <label>Password *</label>
                   <span className="focus-border" />
-                </div>
-                <div className="row mb--30">
-                  <div className="col-lg-6">
-                    <div className="rbt-checkbox">
-                      <input
-                        type="checkbox"
-                        id="rememberme"
-                        name="rememberme"
-                      />
-                      <label htmlFor="rememberme">Remember me</label>
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="rbt-lost-password text-end">
-                      <a className="rbt-btn-link" href="#">
-                        Lost your password?
-                      </a>
-                    </div>
-                  </div>
                 </div>
                 <div className="form-submit-group">
                   <button
@@ -104,6 +108,9 @@ const Forumlogin = () => {
                     </span>
                   </button>
                 </div>
+                <div className="text-center mt-3">
+                  <Link to="/admin/forgot-password">Forgot Password?</Link>
+                </div>
               </form>
             </div>
           </div>
@@ -113,4 +120,4 @@ const Forumlogin = () => {
   );
 };
 
-export default Forumlogin;
+export default AdminLogin;

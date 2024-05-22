@@ -1,14 +1,16 @@
 import React from "react";
-
-import Card from "../components/card.js";
+import Header from "../components/cmmons/header.js";
+import Card from "../components/ss.js";
 import { Link } from "react-router-dom";
-
+import Footer from "../components/cmmons/footer.js";
 
 
 const Landing = () => {
   
   return (
+    
     <div>
+      <Header/>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="robots" content="noindex, follow" />
@@ -32,7 +34,7 @@ const Landing = () => {
         <div className="rbt-banner-area rbt-banner-1">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-12 pb--120 pt--70">
+              <div className="col-md-24   pb--100 pt--70">
                 <div className="content">
                   <div className="inner">
                     <div className="rbt-new-badge rbt-new-badge-one">
@@ -277,22 +279,22 @@ const Landing = () => {
                 <div className="thumbnail-wrapper">
                   <div className="thumbnail image-1">
                     <img
-                      data-parallax='{"x": 0, "y": -20}'
-                      src="assets/images/about/about-01.png"
+                      data-parallax='{"x": 0, "y": 20}'
+                      src="assets/images/about/hero-img1.png"
                       alt="Education Images"
                     />
                   </div>
                   <div className="thumbnail image-2 d-none d-xl-block">
                     <img
-                      data-parallax='{"x": 0, "y": 60}'
-                      src="assets/images/about/about-02.png"
+                      data-parallax='{"x": 0, "y": 40}'
+                      src="assets/images/about/web-development.png"
                       alt="Education Images"
                     />
                   </div>
-                  <div className="thumbnail image-3 d-none d-md-block">
+                  <div className="thumbnail  image-4 d-none d-md-block">
                     <img
-                      data-parallax='{"x": 0, "y": 80}'
-                      src="assets/images/about/about-03.png"
+                      data-parallax='{"x": 0, "y": -20}'
+                      src="assets/images/about/pngegg.png"
                       alt="Education Images"
                     />
                   </div>
@@ -686,7 +688,7 @@ const Landing = () => {
                     </div>
                     <div className="description">
                       <p className="subtitle-3">
-                        Educational template, vulputate at sapien sit amet,
+                        Educational , vulputate at sapien sit amet,
                         auctor iaculis lorem. In vel hend rerit nisi. Vestibulum
                         eget risus velit.
                       </p>
@@ -1118,6 +1120,7 @@ const Landing = () => {
           <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
       </div>
+      <Footer/>
     </div>
   );
 };

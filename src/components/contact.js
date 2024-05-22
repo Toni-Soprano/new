@@ -101,7 +101,7 @@ const Contact = () => {
               <div className="thumbnail">
                 <img
                   className="w-100 radius-6"
-                  src="assets/images/about/contact.jpg"
+                  src="assets/images/about/pngwing.com.png"
                   alt="Contact Images"
                 />
               </div>
@@ -150,7 +150,7 @@ const Contact = () => {
                       type="submit"
                       id="submit"
                       className="rbt-btn btn-md btn-gradient hover-icon-reverse w-100"
-                    >
+                    > Send
                       <span className="icon-reverse-wrapper">
                         <span className="btn-icon">
                           <i className="feather-arrow-right" />
